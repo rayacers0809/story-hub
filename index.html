@@ -727,9 +727,10 @@ h1{
         <label>구매 타입</label>
         <select id="i-buytype">
           <option value="">선택</option>
-          <option>DRM (난독화)</option>
-          <option>오픈소스 (풀코드)</option>
-          <option>기타 (구독,후불)</option>
+          <option>일반 구매</option>
+          <option>구독 (정기결제)</option>
+          <option>후불 거래</option>
+          <option>기타</option>
         </select>
       </div>
       <div class="fg" id="fg-price">
@@ -740,7 +741,7 @@ h1{
     </div>
     <div class="fg">
       <label>사용되는 서버</label>
-      <input type="text" id="i-server" placeholder="예: 00서버 등">
+      <input type="text" id="i-server" placeholder="예: Turn City, 모찌서버 등">
     </div>
     <div class="form-row">
       <div class="fg"><label>소속서버 직급</label><input type="text" id="i-rank" placeholder="예: 일반 유저, 관리자"></div>
@@ -863,7 +864,7 @@ function goP1(){
 function g(id){return document.getElementById(id).value.trim()||'-';}
 function validate(){
   var ok=true;
-  [['fg-product','i-product'],['fg-price','i-price'],['fg-name','i-name'],['fg-phone','i-phone'],['fg-account','i-account']].forEach(function(p){
+  [['fg-product','i-product'],['fg-price','i-price'],['fg-dcid','i-dcid'],['fg-name','i-name'],['fg-phone','i-phone'],['fg-account','i-account']].forEach(function(p){
     var val=document.getElementById(p[1]).value.trim();
     var fg=document.getElementById(p[0]);
     if(!val){fg.classList.add('err');ok=false;}else fg.classList.remove('err');
@@ -881,7 +882,7 @@ async function doSubmit(){
   var embed={embeds:[{
     title:'< 영수증 >',color:0xC9A84C,
     fields:[
-      {name:'[ 고객님 ]',value:'-',inline:true},{name:'[ 판매자 ]',value:'-',inline:true},
+      {name:'[ 고객님 ]',value:document.getElementById('i-dcid').value.trim() ? '<@'+document.getElementById('i-dcid').value.trim()+'>' : '-',inline:true},{name:'[ 판매자 ]',value:'-',inline:true},
       {name:'\u200b',value:'\u200b',inline:false},
       {name:'[ 판매상품 ]',value:g('i-product'),inline:false},
       {name:'[ 구매타입 ]',value:document.getElementById('i-buytype').value||'-',inline:true},
@@ -913,7 +914,7 @@ async function doSubmit(){
 // ── 모달 닫기 ──
 function closeModal(){
   document.getElementById('modal').classList.remove('show');
-  ['i-product','i-price','i-server','i-rank','i-discord','i-name','i-phone','i-account'].forEach(function(id){document.getElementById(id).value='';});
+  ['i-product','i-price','i-server','i-rank','i-discord','i-dcid','i-name','i-phone','i-account'].forEach(function(id){document.getElementById(id).value='';});
   document.getElementById('i-buytype').value='';
   state={terms:false,rules:false,all:false,priv:false};
   setRow('chk-terms',false);setRow('chk-rules',false);setRow('chk-all',false);
