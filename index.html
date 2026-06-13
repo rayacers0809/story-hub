@@ -887,7 +887,7 @@ async function doSubmit(){
   var embed={embeds:[{
     title:'< 영수증 >',color:0xC9A84C,
     fields:[
-      {name:'[ 고객님 ]',value:document.getElementById('i-dcid').value.trim() ? '<@'+document.getElementById('i-dcid').value.trim()+'>' : '-',inline:true},{name:'[ 판매자 ]',value:'-',inline:true},
+      {name:'[ 고객님 ]',value:document.getElementById('i-dcid').value.trim() ? '<@'+document.getElementById('i-dcid').value.trim()+'>' : '-',inline:true},
       {name:'\u200b',value:'\u200b',inline:false},
       {name:'[ 판매상품 ]',value:g('i-product'),inline:false},
       {name:'[ 구매타입 ]',value:document.getElementById('i-buytype').value||'-',inline:true},
