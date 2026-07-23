@@ -884,10 +884,19 @@ async function doSubmit(){
   if(!validate())return;
   var btn=document.getElementById('submitBtn'),txt=document.getElementById('submit-txt'),spin=document.getElementById('spin');
   btn.disabled=true;txt.style.display='none';spin.style.display='block';
-  var embed={embeds:[{
+  // 디스코드 멘션은 "숫자 유저 ID"만 인식함. 유저네임은 태그가 안 됨.
+  var dcidRaw=document.getElementById('i-dcid').value.trim();
+  var dcidDigits=dcidRaw.replace(/[^0-9]/g,'');
+  var isNumericId=dcidDigits.length>=17&&dcidDigits.length<=20;
+  var mention=isNumericId?('<@'+dcidDigits+'>'):(dcidRaw||'-');
+  var embed={
+    // 임베드 안의 멘션은 알림(핑)이 안 감 → 본문(content)에 넣어야 실제 태그됨
+    content:isNumericId?('<@'+dcidDigits+'> 님, 구매 영수증이 도착했습니다.'):'',
+    allowed_mentions:isNumericId?{users:[dcidDigits]}:{parse:[]},
+    embeds:[{
     title:'< 영수증 >',color:0xC9A84C,
     fields:[
-      {name:'[ 고객님 ]',value:document.getElementById('i-dcid').value.trim() ? '<@'+document.getElementById('i-dcid').value.trim()+'>' : '-',inline:true},
+      {name:'[ 고객님 ]',value:mention,inline:true},
       {name:'\u200b',value:'\u200b',inline:false},
       {name:'[ 판매상품 ]',value:g('i-product'),inline:false},
       {name:'[ 구매타입 ]',value:document.getElementById('i-buytype').value||'-',inline:true},
