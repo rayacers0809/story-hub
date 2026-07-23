@@ -1,926 +1,1881 @@
 <!DOCTYPE html>
 <html lang="ko" data-theme="light">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Story HUB — 구매 약관동의서</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cinzel:wght@700;900&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
-<style>
-/* ── 다크 테마 (기본) ── */
-[data-theme="dark"] {
-  --pu: #c9a84c;
-  --pu-l: #f0d98a;
-  --pu-ll: rgba(201,168,76,0.12);
-  --pu-d: #7a5e28;
-  --bg: #07070a;
-  --bg2: #0d0d12;
-  --bg3: #13131a;
-  --bg4: #1a1a23;
-  --border: rgba(201,168,76,0.14);
-  --border-b: rgba(201,168,76,0.4);
-  --text: #ede9df;
-  --text-dim: #857f76;
-  --text-mid: #b8b0a4;
-  --red: #e05252;
-  --green: #52c07a;
-  --shadow: rgba(0,0,0,0.4);
-  --chk-stroke: #07070a;
-  --modal-bg-overlay: rgba(0,0,0,0.88);
-  --dot-color: rgba(201,168,76,0.025);
-  --glow1: rgba(201,168,76,0.09);
-  --glow2: rgba(201,168,76,0.03);
-  --btn-color: #07070a;
-  --spinner-bg: rgba(7,7,10,0.3);
-  --spinner-top: #07070a;
-  --tab-bg: var(--bg2);
-  --input-bg: var(--bg4);
-  --priv-bg: var(--bg4);
-  --footer-text: rgba(133,127,118,0.35);
-  --footer-strong: rgba(201,168,76,0.3);
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story HUB — 구매 약관동의서</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cinzel:wght@700;900&family=Noto+Serif+KR:wght@600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ── 다크 테마 (기본) ── */
+    [data-theme="dark"] {
+      --pu: #c9a84c;
+      --pu-l: #f0d98a;
+      --pu-ll: rgba(201, 168, 76, 0.12);
+      --pu-d: #7a5e28;
+      --bg: #07070a;
+      --bg2: #0d0d12;
+      --bg3: #13131a;
+      --bg4: #1a1a23;
+      --border: rgba(201, 168, 76, 0.14);
+      --border-b: rgba(201, 168, 76, 0.4);
+      --text: #ede9df;
+      --text-dim: #857f76;
+      --text-mid: #b8b0a4;
+      --red: #e05252;
+      --green: #52c07a;
+      --shadow: rgba(0, 0, 0, 0.4);
+      --chk-stroke: #07070a;
+      --modal-bg-overlay: rgba(0, 0, 0, 0.88);
+      --dot-color: rgba(201, 168, 76, 0.025);
+      --glow1: rgba(201, 168, 76, 0.09);
+      --glow2: rgba(201, 168, 76, 0.03);
+      --btn-color: #07070a;
+      --spinner-bg: rgba(7, 7, 10, 0.3);
+      --spinner-top: #07070a;
+      --tab-bg: var(--bg2);
+      --input-bg: var(--bg4);
+      --priv-bg: var(--bg4);
+      --footer-text: rgba(133, 127, 118, 0.35);
+      --footer-strong: rgba(201, 168, 76, 0.3);
+    }
 
-/* ── 라이트 테마 ── */
-[data-theme="light"] {
-  --pu: #7c3aed;
-  --pu-l: #a78bfa;
-  --pu-ll: #ede9fe;
-  --pu-d: #5b21b6;
-  --bg: #f8f7ff;
-  --bg2: #ffffff;
-  --bg3: #f5f3ff;
-  --bg4: #f0ebff;
-  --border: rgba(124,58,237,0.12);
-  --border-b: rgba(124,58,237,0.35);
-  --text: #1e1b4b;
-  --text-dim: #6b7280;
-  --text-mid: #4b5563;
-  --red: #dc2626;
-  --green: #16a34a;
-  --shadow: rgba(124,58,237,0.08);
-  --chk-stroke: #ffffff;
-  --modal-bg-overlay: rgba(30,27,75,0.5);
-  --dot-color: rgba(124,58,237,0.04);
-  --glow1: rgba(124,58,237,0.07);
-  --glow2: rgba(167,139,250,0.04);
-  --btn-color: #ffffff;
-  --spinner-bg: rgba(255,255,255,0.3);
-  --spinner-top: #ffffff;
-  --tab-bg: #ffffff;
-  --input-bg: var(--bg3);
-  --priv-bg: var(--bg4);
-  --footer-text: rgba(107,114,128,0.5);
-  --footer-strong: rgba(124,58,237,0.4);
-}
+    /* ── 라이트 테마 ── */
+    [data-theme="light"] {
+      --pu: #7c3aed;
+      --pu-l: #a78bfa;
+      --pu-ll: #ede9fe;
+      --pu-d: #5b21b6;
+      --bg: #f8f7ff;
+      --bg2: #ffffff;
+      --bg3: #f5f3ff;
+      --bg4: #f0ebff;
+      --border: rgba(124, 58, 237, 0.12);
+      --border-b: rgba(124, 58, 237, 0.35);
+      --text: #1e1b4b;
+      --text-dim: #6b7280;
+      --text-mid: #4b5563;
+      --red: #dc2626;
+      --green: #16a34a;
+      --shadow: rgba(124, 58, 237, 0.08);
+      --chk-stroke: #ffffff;
+      --modal-bg-overlay: rgba(30, 27, 75, 0.5);
+      --dot-color: rgba(124, 58, 237, 0.04);
+      --glow1: rgba(124, 58, 237, 0.07);
+      --glow2: rgba(167, 139, 250, 0.04);
+      --btn-color: #ffffff;
+      --spinner-bg: rgba(255, 255, 255, 0.3);
+      --spinner-top: #ffffff;
+      --tab-bg: #ffffff;
+      --input-bg: var(--bg3);
+      --priv-bg: var(--bg4);
+      --footer-text: rgba(107, 114, 128, 0.5);
+      --footer-strong: rgba(124, 58, 237, 0.4);
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Noto Sans KR',sans-serif;
-  min-height:100vh;
-  overflow-x:hidden;
-  transition:background .35s, color .35s;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body::before{
-  content:'';position:fixed;inset:0;
-  background:
-    radial-gradient(ellipse 100% 60% at 50% -5%, var(--glow1) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 10% 80%, var(--glow2) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 30% at 90% 20%, var(--glow2) 0%, transparent 50%);
-  pointer-events:none;z-index:0;
-  transition:background .35s;
-}
-body::after{
-  content:'';position:fixed;inset:0;
-  background-image:
-    repeating-linear-gradient(0deg,transparent,transparent 79px,var(--dot-color) 80px),
-    repeating-linear-gradient(90deg,transparent,transparent 79px,var(--dot-color) 80px);
-  pointer-events:none;z-index:0;
-}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans KR', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: background .35s, color .35s;
+    }
 
-/* ── 테마 토글 버튼 ── */
-.theme-toggle{
-  position:fixed;top:20px;right:20px;
-  z-index:50;
-  width:48px;height:48px;
-  border-radius:50%;
-  border:1.5px solid var(--border-b);
-  background:var(--bg2);
-  cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  font-size:20px;
-  box-shadow:0 4px 16px var(--shadow);
-  transition:all .25s;
-  -webkit-tap-highlight-color:transparent;
-}
-.theme-toggle:hover{
-  transform:scale(1.1);
-  box-shadow:0 6px 24px var(--shadow);
-  border-color:var(--pu);
-}
-.theme-toggle:active{transform:scale(0.95);}
-.icon-dark{display:block;}
-.icon-light{display:none;}
-[data-theme="light"] .icon-dark{display:none;}
-[data-theme="light"] .icon-light{display:block;}
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 100% 60% at 50% -5%, var(--glow1) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 10% 80%, var(--glow2) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 30% at 90% 20%, var(--glow2) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+      transition: background .35s;
+    }
 
-.wrap{
-  position:relative;z-index:1;
-  max-width:800px;
-  margin:0 auto;
-  padding:0 20px 100px;
-}
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 79px, var(--dot-color) 80px),
+        repeating-linear-gradient(90deg, transparent, transparent 79px, var(--dot-color) 80px);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-/* ── HEADER ── */
-header{text-align:center;padding:70px 0 50px;}
+    /* ── 테마 토글 버튼 ── */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 50;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border-b);
+      background: var(--bg2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 16px var(--shadow);
+      transition: all .25s;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-.top-line{
-  display:flex;align-items:center;justify-content:center;gap:14px;
-  margin-bottom:28px;
-}
-.top-line::before,.top-line::after{
-  content:'';flex:1;max-width:120px;height:1px;
-  background:linear-gradient(90deg,transparent,var(--pu-d));
-}
-.top-line::after{background:linear-gradient(90deg,var(--pu-d),transparent);}
-[data-theme="light"] .top-line::before{background:linear-gradient(90deg,transparent,var(--pu-l));}
-[data-theme="light"] .top-line::after{background:linear-gradient(90deg,var(--pu-l),transparent);}
+    .theme-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px var(--shadow);
+      border-color: var(--pu);
+    }
 
-.top-pill{
-  font-size:10px;letter-spacing:5px;color:var(--pu);
-  border:1px solid var(--border-b);
-  padding:5px 16px;border-radius:20px;
-  background:var(--pu-ll);
-  text-transform:uppercase;font-weight:700;
-  transition:all .35s;
-}
+    .theme-toggle:active {
+      transform: scale(0.95);
+    }
 
-h1{
-  font-family:'Cinzel',serif;
-  font-size:clamp(42px,9vw,72px);font-weight:900;letter-spacing:2px;
-  background:linear-gradient(160deg,var(--pu-l) 0%,var(--pu) 45%,var(--pu-d) 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;line-height:1.05;
-}
-.h1-sub{
-  font-family:'Cinzel',serif;
-  font-size:clamp(11px,2vw,14px);letter-spacing:8px;
-  color:var(--pu-d);margin-top:8px;transition:color .35s;
-}
-[data-theme="light"] .h1-sub{color:var(--pu-l);}
+    .icon-dark {
+      display: block;
+    }
 
-.header-desc{margin-top:20px;font-size:12.5px;color:var(--text-dim);letter-spacing:1.5px;transition:color .35s;}
+    .icon-light {
+      display: none;
+    }
 
-/* ── 스텝 바 ── */
-.stepbar{display:flex;align-items:center;justify-content:center;margin:44px 0 36px;gap:0;}
-.sb-item{display:flex;flex-direction:column;align-items:center;gap:7px;}
-.sb-num{
-  width:38px;height:38px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:700;
-  border:2px solid var(--border);
-  color:var(--text-dim);
-  background:var(--bg3);
-  transition:all .4s;position:relative;
-  box-shadow:0 2px 8px var(--shadow);
-}
-.sb-item.active .sb-num{
-  border-color:var(--pu);background:var(--pu-ll);
-  color:var(--pu-l);box-shadow:0 0 20px var(--shadow);
-}
-[data-theme="light"] .sb-item.active .sb-num{color:var(--pu-d);}
-.sb-item.done .sb-num{border-color:var(--pu-d);background:var(--pu-ll);color:var(--pu-d);}
-.sb-item.done .sb-num::after{content:'✓';position:absolute;font-size:14px;color:var(--pu);}
-.sb-item.done .sb-num span{opacity:0;}
-.sb-label{font-size:10.5px;color:var(--text-dim);letter-spacing:1px;transition:color .35s;}
-.sb-item.active .sb-label{color:var(--pu);font-weight:600;}
-.sb-line{width:70px;height:1px;background:var(--border);margin-bottom:22px;transition:background .4s;}
-.sb-item.done + .sb-line{background:var(--pu-d);}
+    [data-theme="light"] .icon-dark {
+      display: none;
+    }
 
-/* ── 탭 네비 ── */
-.tab-nav{
-  display:flex;gap:4px;
-  background:var(--tab-bg);
-  border:1px solid var(--border);
-  border-radius:10px;padding:5px;margin-bottom:24px;
-  box-shadow:0 2px 12px var(--shadow);
-  transition:all .35s;
-}
-.tab-btn{
-  flex:1;padding:10px;
-  background:transparent;border:none;
-  color:var(--text-dim);
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:12px;font-weight:500;letter-spacing:1px;
-  border-radius:7px;cursor:pointer;transition:all .25s;
-}
-.tab-btn.on{
-  background:linear-gradient(135deg,var(--pu),var(--pu-d));
-  color:var(--btn-color);
-  box-shadow:0 4px 14px var(--shadow);
-}
-[data-theme="dark"] .tab-btn.on{
-  background:linear-gradient(135deg,rgba(201,168,76,0.18),rgba(201,168,76,0.08));
-  color:var(--pu-l);
-  border:1px solid var(--border-b);
-  box-shadow:none;
-}
-.tab-panel{display:none;}
-.tab-panel.on{display:block;}
+    [data-theme="light"] .icon-light {
+      display: block;
+    }
 
-/* ── 섹션 카드 ── */
-.sec-card{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:10px;margin-bottom:10px;overflow:hidden;
-  transition:border-color .25s,box-shadow .25s,background .35s;
-  box-shadow:0 1px 4px var(--shadow);
-}
-.sec-card:hover{border-color:var(--border-b);box-shadow:0 4px 20px var(--shadow);}
-.sec-card.open{border-color:var(--border-b);}
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 100px;
+    }
 
-.sec-hd{
-  padding:14px 18px;
-  display:flex;align-items:center;justify-content:space-between;
-  cursor:pointer;user-select:none;
-  background:linear-gradient(90deg,var(--pu-ll),transparent 70%);
-}
-.sec-title{
-  display:flex;align-items:center;gap:10px;
-  font-size:12.5px;font-weight:700;color:var(--pu);letter-spacing:0.5px;
-  transition:color .35s;
-}
-[data-theme="dark"] .sec-title{color:var(--pu);}
-[data-theme="light"] .sec-title{color:var(--pu-d);}
-.sec-icon{
-  width:26px;height:26px;border:1px solid var(--border-b);border-radius:6px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:12px;flex-shrink:0;background:var(--pu-ll);transition:all .35s;
-}
-.sec-toggle{color:var(--pu-l);font-size:20px;font-weight:300;transition:transform .3s;line-height:1;}
-[data-theme="dark"] .sec-toggle{color:var(--text-dim);}
-.sec-card.open .sec-toggle{transform:rotate(45deg);}
-.sec-bd{
-  display:none;padding:0 18px 18px;
-  border-top:1px solid var(--border);
-  animation:slideDown .2s ease;
-}
-.sec-card.open .sec-bd{display:block;}
-@keyframes slideDown{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
+    /* ── HEADER ── */
+    header {
+      text-align: center;
+      padding: 70px 0 50px;
+    }
 
-.terms-intro{font-size:12.5px;line-height:1.95;color:var(--text-mid);padding-top:14px;transition:color .35s;}
-.terms-list{list-style:none;padding-top:10px;}
-.terms-list li{
-  font-size:12.5px;line-height:1.85;color:var(--text-mid);
-  padding:7px 0 7px 20px;position:relative;
-  border-bottom:1px solid var(--border);transition:color .35s;
-}
-.terms-list li:last-child{border-bottom:none;}
-.terms-list li::before{
-  content:attr(data-n)'.';position:absolute;left:0;
-  color:var(--pu-d);font-weight:700;font-size:11px;
-}
-[data-theme="light"] .terms-list li::before{color:var(--pu-l);}
+    .top-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
 
-/* ── 운영지침 ── */
-.notice-banner{
-  background:var(--pu-ll);border:1px solid var(--border-b);
-  border-radius:10px;padding:18px 20px;margin-bottom:16px;transition:all .35s;
-}
-[data-theme="dark"] .notice-banner{background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.04));}
-.notice-banner-title{
-  font-size:11px;letter-spacing:3px;color:var(--pu);font-weight:700;
-  margin-bottom:12px;display:flex;align-items:center;gap:8px;
-}
-[data-theme="light"] .notice-banner-title{color:var(--pu-d);}
-.notice-banner-title::before{content:'⚠';font-size:13px;}
-.notice-item{
-  display:flex;align-items:flex-start;gap:10px;padding:8px 0;
-  border-bottom:1px solid var(--border);
-  font-size:12.5px;color:var(--text-mid);line-height:1.7;transition:color .35s;
-}
-.notice-item:last-child{border-bottom:none;}
-.notice-plus{color:var(--green);font-weight:700;font-size:13px;flex-shrink:0;margin-top:1px;}
+    .top-line::before,
+    .top-line::after {
+      content: '';
+      flex: 1;
+      max-width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--pu-d));
+    }
 
-.rule-card{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:8px;padding:14px 16px;margin-bottom:8px;
-  transition:all .2s;box-shadow:0 1px 4px var(--shadow);
-}
-[data-theme="dark"] .rule-card{background:var(--bg3);}
-.rule-card:hover{border-color:var(--border-b);box-shadow:0 4px 16px var(--shadow);}
-.rule-num{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:22px;height:22px;background:var(--pu-ll);
-  border:1px solid var(--border-b);border-radius:4px;
-  font-size:10px;font-weight:700;color:var(--pu);
-  flex-shrink:0;margin-right:10px;float:left;margin-top:1px;
-  transition:all .35s;
-}
-[data-theme="dark"] .rule-num{color:var(--pu);}
-[data-theme="light"] .rule-num{color:var(--pu-d);}
-.rule-content{overflow:hidden;}
-.rule-main{font-size:12.5px;color:var(--text);line-height:1.7;font-weight:500;transition:color .35s;}
-.rule-sub{
-  font-size:11.5px;color:var(--text-dim);margin-top:4px;
-  border-left:2px solid var(--pu-l);padding-left:8px;
-  line-height:1.65;transition:all .35s;
-}
-[data-theme="dark"] .rule-sub{border-left-color:var(--pu-d);}
-.rule-badge{
-  display:inline-block;font-size:10px;letter-spacing:0.5px;
-  padding:2px 7px;border-radius:4px;
-  font-weight:700;margin-left:6px;vertical-align:middle;
-}
-.badge-ban{background:rgba(220,38,38,0.1);color:var(--red);border:1px solid rgba(220,38,38,0.25);}
-[data-theme="dark"] .badge-ban{background:rgba(224,82,82,0.15);border-color:rgba(224,82,82,0.3);}
-.badge-warn{background:var(--pu-ll);color:var(--pu);border:1px solid var(--border-b);}
-[data-theme="light"] .badge-warn{color:var(--pu-d);}
-.badge-pban{background:rgba(220,38,38,0.16);color:#b91c1c;border:1px solid rgba(220,38,38,0.35);}
-[data-theme="dark"] .badge-pban{color:#ff7070;background:rgba(224,82,82,0.25);border-color:rgba(224,82,82,0.5);}
+    .top-line::after {
+      background: linear-gradient(90deg, var(--pu-d), transparent);
+    }
 
-.owner-strip{
-  text-align:center;padding:16px;
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:8px;margin-top:16px;
-  font-size:11px;color:var(--text-dim);letter-spacing:2px;line-height:2;
-  transition:all .35s;
-}
-.owner-strip strong{color:var(--pu);}
-[data-theme="light"] .owner-strip strong{color:var(--pu-d);}
+    [data-theme="light"] .top-line::before {
+      background: linear-gradient(90deg, transparent, var(--pu-l));
+    }
 
-/* ── 동의 구역 ── */
-.orn{display:flex;align-items:center;gap:16px;margin:28px 0;}
-.orn::before,.orn::after{
-  content:'';flex:1;height:1px;
-  background:linear-gradient(90deg,transparent,var(--pu-l),transparent);
-}
-.orn span{font-size:12px;color:var(--pu);font-weight:600;}
-[data-theme="dark"] .orn span{color:var(--pu-d);}
+    [data-theme="light"] .top-line::after {
+      background: linear-gradient(90deg, var(--pu-l), transparent);
+    }
 
-.agree-group{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
-.agree-row{
-  display:flex;align-items:flex-start;gap:14px;
-  background:var(--bg2);border:1.5px solid var(--border);
-  border-radius:10px;padding:16px 18px;cursor:pointer;
-  transition:all .2s;user-select:none;-webkit-tap-highlight-color:transparent;
-  box-shadow:0 1px 4px var(--shadow);
-}
-[data-theme="dark"] .agree-row{background:var(--bg3);}
-.agree-row:hover{border-color:var(--border-b);box-shadow:0 4px 16px var(--shadow);}
-.agree-row.on{border-color:var(--pu);background:var(--pu-ll);}
-[data-theme="dark"] .agree-row.on{background:rgba(201,168,76,0.06);}
+    .top-pill {
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: var(--pu);
+      border: 1px solid var(--border-b);
+      padding: 5px 16px;
+      border-radius: 20px;
+      background: var(--pu-ll);
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: all .35s;
+    }
 
-.chk-box{
-  width:22px;height:22px;border:2px solid var(--border-b);border-radius:5px;
-  flex-shrink:0;margin-top:1px;
-  display:flex;align-items:center;justify-content:center;
-  transition:all .2s;background:var(--bg2);pointer-events:none;
-}
-[data-theme="dark"] .chk-box{background:var(--bg4);}
-.agree-row.on .chk-box{background:var(--pu);border-color:var(--pu);}
-.chk-mark{opacity:0;transition:opacity .15s;pointer-events:none;}
-.agree-row.on .chk-mark{opacity:1;}
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(42px, 9vw, 72px);
+      font-weight: 900;
+      letter-spacing: 2px;
+      background: linear-gradient(160deg, var(--pu-l) 0%, var(--pu) 45%, var(--pu-d) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.05;
+    }
 
-.agree-text strong{display:block;font-size:13.5px;color:var(--text);margin-bottom:3px;font-weight:700;transition:color .35s;}
-.agree-row.on .agree-text strong{color:var(--pu);}
-[data-theme="light"] .agree-row.on .agree-text strong{color:var(--pu-d);}
-.agree-text span{font-size:12px;color:var(--text-dim);line-height:1.65;transition:color .35s;}
+    .h1-sub {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(11px, 2vw, 14px);
+      letter-spacing: 8px;
+      color: var(--pu-d);
+      margin-top: 8px;
+      transition: color .35s;
+    }
 
-.agree-all-row{
-  background:var(--pu-ll) !important;
-  border-color:var(--border-b) !important;
-}
-[data-theme="dark"] .agree-all-row{background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03)) !important;}
-.agree-all-row.on{background:var(--pu-ll) !important;}
-[data-theme="dark"] .agree-all-row.on{background:linear-gradient(135deg,rgba(201,168,76,0.14),rgba(201,168,76,0.06)) !important;}
+    [data-theme="light"] .h1-sub {
+      color: var(--pu-l);
+    }
 
-/* 버튼 */
-.next-btn{
-  width:100%;margin-top:6px;padding:17px;
-  background:linear-gradient(135deg,var(--pu) 0%,var(--pu-d) 100%);
-  border:none;border-radius:10px;
-  color:var(--btn-color);
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:14px;font-weight:700;letter-spacing:2px;
-  cursor:pointer;position:relative;overflow:hidden;
-  transition:opacity .2s,transform .1s,box-shadow .2s,background .35s;
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  box-shadow:0 4px 20px var(--shadow);
-}
-[data-theme="dark"] .next-btn{
-  background:linear-gradient(135deg,var(--pu) 0%,#a87e30 100%);
-  color:#07070a;
-}
-.next-btn::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,0.15),transparent);
-  opacity:0;transition:opacity .2s;
-}
-.next-btn:hover:not(:disabled)::before{opacity:1;}
-.next-btn:hover:not(:disabled){box-shadow:0 8px 32px var(--shadow);}
-.next-btn:active:not(:disabled){transform:scale(0.99);}
-.next-btn:disabled{opacity:0.35;cursor:not-allowed;box-shadow:none;}
+    .header-desc {
+      margin-top: 20px;
+      font-size: 12.5px;
+      color: var(--text-dim);
+      letter-spacing: 1.5px;
+      transition: color .35s;
+    }
 
-/* ── 폼 ── */
-.form-card{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:12px;padding:32px;
-  box-shadow:0 4px 24px var(--shadow);transition:all .35s;
-}
-.form-sec-title{
-  font-size:11px;letter-spacing:3.5px;color:var(--pu);font-weight:700;
-  margin-bottom:20px;display:flex;align-items:center;gap:10px;transition:color .35s;
-}
-[data-theme="light"] .form-sec-title{color:var(--pu-d);}
-.form-sec-title::before{
-  content:'';width:3px;height:18px;
-  background:linear-gradient(180deg,var(--pu-l),var(--pu-d));border-radius:2px;
-}
-.fg{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;}
-.fg label{font-size:10.5px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;font-weight:600;transition:color .35s;}
-.fg label .req{color:var(--pu);margin-left:3px;}
-.fg input,.fg select{
-  background:var(--input-bg);border:1.5px solid var(--border);
-  border-radius:8px;padding:12px 15px;color:var(--text);
-  font-family:'Noto Sans KR',sans-serif;font-size:13px;
-  outline:none;transition:all .2s;width:100%;
-}
-.fg input::placeholder{color:rgba(133,127,118,0.4);}
-[data-theme="light"] .fg input::placeholder{color:rgba(107,114,128,0.45);}
-.fg input:focus,.fg select:focus{
-  border-color:var(--pu);background:var(--bg2);
-  box-shadow:0 0 0 3px var(--pu-ll);
-}
-.fg.err input{border-color:var(--red);}
-.err-msg{font-size:11px;color:var(--red);display:none;}
-.fg.err .err-msg{display:block;}
-.fg select{
-  cursor:pointer;appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%237c3aed' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;
-}
-[data-theme="dark"] .fg select{
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23c9a84c' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-}
-.fg select option{background:var(--bg3);}
+    /* ── 스텝 바 ── */
+    .stepbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 44px 0 36px;
+      gap: 0;
+    }
 
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.form-divider{
-  display:flex;align-items:center;gap:12px;margin:20px 0;
-  font-size:10px;letter-spacing:3px;color:var(--text-dim);font-weight:600;
-}
-.form-divider::before,.form-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+    .sb-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+    }
 
-.privacy-row{
-  display:flex;align-items:center;gap:12px;
-  background:var(--priv-bg);border:1.5px solid var(--border);
-  border-radius:8px;padding:13px 16px;cursor:pointer;
-  transition:all .2s;margin-bottom:14px;
-  user-select:none;-webkit-tap-highlight-color:transparent;
-}
-.privacy-row:hover{border-color:var(--border-b);}
-.privacy-row.on{border-color:var(--pu);background:var(--pu-ll);}
-[data-theme="dark"] .privacy-row.on{background:rgba(201,168,76,0.05);}
-.privacy-row .chk-box{width:20px;height:20px;flex-shrink:0;}
-.privacy-row.on .chk-box{background:var(--pu);border-color:var(--pu);}
-.privacy-row.on .chk-mark{opacity:1;}
-.privacy-row span{font-size:12.5px;color:var(--text-dim);transition:color .35s;}
-.privacy-row.on span{color:var(--text);}
-[data-theme="light"] .privacy-row.on span{color:var(--pu-d);}
+    .sb-num {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      border: 2px solid var(--border);
+      color: var(--text-dim);
+      background: var(--bg3);
+      transition: all .4s;
+      position: relative;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
 
-/* ── 모달 ── */
-.modal-bg{
-  position:fixed;inset:0;background:var(--modal-bg-overlay);
-  display:none;align-items:center;justify-content:center;
-  z-index:200;backdrop-filter:blur(6px);
-}
-.modal-bg.show{display:flex;}
-.modal{
-  background:var(--bg2);border:1px solid var(--border-b);
-  border-radius:16px;padding:48px 40px;text-align:center;
-  max-width:420px;width:90%;position:relative;
-  animation:mIn .3s cubic-bezier(0.34,1.56,0.64,1);
-  box-shadow:0 20px 60px var(--shadow);transition:background .35s;
-}
-@keyframes mIn{from{transform:scale(0.85) translateY(30px);opacity:0;}to{transform:scale(1) translateY(0);opacity:1;}}
-.modal-glow{
-  position:absolute;top:0;left:50%;transform:translateX(-50%);
-  width:60%;height:3px;
-  background:linear-gradient(90deg,transparent,var(--pu),transparent);
-  border-radius:0 0 4px 4px;
-}
-.modal-icon{
-  width:64px;height:64px;border-radius:50%;
-  background:var(--pu-ll);border:2px solid var(--pu-l);
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 22px;font-size:26px;
-  box-shadow:0 0 30px var(--shadow);transition:all .35s;
-}
-.modal h3{font-family:'Cinzel',serif;font-size:22px;color:var(--pu);margin-bottom:10px;transition:color .35s;}
-[data-theme="dark"] .modal h3{color:var(--pu-l);}
-[data-theme="light"] .modal h3{color:var(--pu-d);}
-.modal p{font-size:13px;color:var(--text-dim);line-height:1.9;transition:color .35s;}
-.modal-close{
-  margin-top:28px;padding:11px 36px;
-  background:var(--pu-ll);border:1px solid var(--border-b);
-  border-radius:8px;color:var(--pu);
-  font-family:'Noto Sans KR',sans-serif;
-  font-size:13px;font-weight:600;letter-spacing:2px;
-  cursor:pointer;transition:all .2s;
-}
-[data-theme="light"] .modal-close{color:var(--pu-d);}
-.modal-close:hover{background:var(--pu);color:#fff;box-shadow:0 4px 16px var(--shadow);}
+    .sb-item.active .sb-num {
+      border-color: var(--pu);
+      background: var(--pu-ll);
+      color: var(--pu-l);
+      box-shadow: 0 0 20px var(--shadow);
+    }
 
-.spinner{
-  width:18px;height:18px;
-  border:2px solid var(--spinner-bg);border-top-color:var(--spinner-top);
-  border-radius:50%;animation:spin .6s linear infinite;
-  display:none;flex-shrink:0;
-}
-@keyframes spin{to{transform:rotate(360deg);}}
+    [data-theme="light"] .sb-item.active .sb-num {
+      color: var(--pu-d);
+    }
 
-.back-link{
-  text-align:center;margin-top:16px;
-  font-size:12px;color:var(--text-dim);
-  cursor:pointer;letter-spacing:1px;transition:color .2s;
-}
-.back-link:hover{color:var(--pu);}
+    .sb-item.done .sb-num {
+      border-color: var(--pu-d);
+      background: var(--pu-ll);
+      color: var(--pu-d);
+    }
 
-.footer{
-  text-align:center;margin-top:50px;
-  font-size:11px;color:var(--footer-text);
-  letter-spacing:2px;line-height:2.2;transition:color .35s;
-}
-.footer strong{color:var(--footer-strong);}
+    .sb-item.done .sb-num::after {
+      content: '✓';
+      position: absolute;
+      font-size: 14px;
+      color: var(--pu);
+    }
 
-.page{animation:fadeUp .4s ease;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .sb-item.done .sb-num span {
+      opacity: 0;
+    }
 
-@media(max-width:540px){
-  .form-row{grid-template-columns:1fr;}
-  .sb-line{width:36px;}
-  .form-card{padding:22px 16px;}
-  h1{letter-spacing:1px;}
-  .theme-toggle{top:14px;right:14px;width:42px;height:42px;font-size:18px;}
-}
-</style>
+    .sb-label {
+      font-size: 10.5px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      transition: color .35s;
+    }
+
+    .sb-item.active .sb-label {
+      color: var(--pu);
+      font-weight: 600;
+    }
+
+    .sb-line {
+      width: 70px;
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 22px;
+      transition: background .4s;
+    }
+
+    .sb-item.done+.sb-line {
+      background: var(--pu-d);
+    }
+
+    /* ── 탭 네비 ── */
+    .tab-nav {
+      display: flex;
+      gap: 4px;
+      background: var(--tab-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 5px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px var(--shadow);
+      transition: all .35s;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 10px;
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all .25s;
+    }
+
+    .tab-btn.on {
+      background: linear-gradient(135deg, var(--pu), var(--pu-d));
+      color: var(--btn-color);
+      box-shadow: 0 4px 14px var(--shadow);
+    }
+
+    [data-theme="dark"] .tab-btn.on {
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.18), rgba(201, 168, 76, 0.08));
+      color: var(--pu-l);
+      border: 1px solid var(--border-b);
+      box-shadow: none;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.on {
+      display: block;
+    }
+
+    /* ── 섹션 카드 ── */
+    .sec-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: border-color .25s, box-shadow .25s, background .35s;
+      box-shadow: 0 1px 4px var(--shadow);
+    }
+
+    .sec-card:hover {
+      border-color: var(--border-b);
+      box-shadow: 0 4px 20px var(--shadow);
+    }
+
+    .sec-card.open {
+      border-color: var(--border-b);
+    }
+
+    .sec-hd {
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      background: linear-gradient(90deg, var(--pu-ll), transparent 70%);
+    }
+
+    .sec-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--pu);
+      letter-spacing: 0.5px;
+      transition: color .35s;
+    }
+
+    [data-theme="dark"] .sec-title {
+      color: var(--pu);
+    }
+
+    [data-theme="light"] .sec-title {
+      color: var(--pu-d);
+    }
+
+    .sec-icon {
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--border-b);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+      background: var(--pu-ll);
+      transition: all .35s;
+    }
+
+    .sec-toggle {
+      color: var(--pu-l);
+      font-size: 20px;
+      font-weight: 300;
+      transition: transform .3s;
+      line-height: 1;
+    }
+
+    [data-theme="dark"] .sec-toggle {
+      color: var(--text-dim);
+    }
+
+    .sec-card.open .sec-toggle {
+      transform: rotate(45deg);
+    }
+
+    .sec-bd {
+      display: none;
+      padding: 0 18px 18px;
+      border-top: 1px solid var(--border);
+      animation: slideDown .2s ease;
+    }
+
+    .sec-card.open .sec-bd {
+      display: block;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .terms-intro {
+      font-size: 12.5px;
+      line-height: 1.95;
+      color: var(--text-mid);
+      padding-top: 14px;
+      transition: color .35s;
+    }
+
+    .terms-list {
+      list-style: none;
+      padding-top: 10px;
+    }
+
+    .terms-list li {
+      font-size: 12.5px;
+      line-height: 1.85;
+      color: var(--text-mid);
+      padding: 7px 0 7px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      transition: color .35s;
+    }
+
+    .terms-list li:last-child {
+      border-bottom: none;
+    }
+
+    .terms-list li::before {
+      content: attr(data-n)'.';
+      position: absolute;
+      left: 0;
+      color: var(--pu-d);
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    [data-theme="light"] .terms-list li::before {
+      color: var(--pu-l);
+    }
+
+    /* ── 운영지침 ── */
+    .notice-banner {
+      background: var(--pu-ll);
+      border: 1px solid var(--border-b);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+      transition: all .35s;
+    }
+
+    [data-theme="dark"] .notice-banner {
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.1), rgba(201, 168, 76, 0.04));
+    }
+
+    .notice-banner-title {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--pu);
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    [data-theme="light"] .notice-banner-title {
+      color: var(--pu-d);
+    }
+
+    .notice-banner-title::before {
+      content: '⚠';
+      font-size: 13px;
+    }
+
+    .notice-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      transition: color .35s;
+    }
+
+    .notice-item:last-child {
+      border-bottom: none;
+    }
+
+    .notice-plus {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .rule-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 8px;
+      transition: all .2s;
+      box-shadow: 0 1px 4px var(--shadow);
+    }
+
+    [data-theme="dark"] .rule-card {
+      background: var(--bg3);
+    }
+
+    .rule-card:hover {
+      border-color: var(--border-b);
+      box-shadow: 0 4px 16px var(--shadow);
+    }
+
+    .rule-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      background: var(--pu-ll);
+      border: 1px solid var(--border-b);
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--pu);
+      flex-shrink: 0;
+      margin-right: 10px;
+      float: left;
+      margin-top: 1px;
+      transition: all .35s;
+    }
+
+    [data-theme="dark"] .rule-num {
+      color: var(--pu);
+    }
+
+    [data-theme="light"] .rule-num {
+      color: var(--pu-d);
+    }
+
+    .rule-content {
+      overflow: hidden;
+    }
+
+    .rule-main {
+      font-size: 12.5px;
+      color: var(--text);
+      line-height: 1.7;
+      font-weight: 500;
+      transition: color .35s;
+    }
+
+    .rule-sub {
+      font-size: 11.5px;
+      color: var(--text-dim);
+      margin-top: 4px;
+      border-left: 2px solid var(--pu-l);
+      padding-left: 8px;
+      line-height: 1.65;
+      transition: all .35s;
+    }
+
+    [data-theme="dark"] .rule-sub {
+      border-left-color: var(--pu-d);
+    }
+
+    .rule-badge {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 700;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .badge-ban {
+      background: rgba(220, 38, 38, 0.1);
+      color: var(--red);
+      border: 1px solid rgba(220, 38, 38, 0.25);
+    }
+
+    [data-theme="dark"] .badge-ban {
+      background: rgba(224, 82, 82, 0.15);
+      border-color: rgba(224, 82, 82, 0.3);
+    }
+
+    .badge-warn {
+      background: var(--pu-ll);
+      color: var(--pu);
+      border: 1px solid var(--border-b);
+    }
+
+    [data-theme="light"] .badge-warn {
+      color: var(--pu-d);
+    }
+
+    .badge-pban {
+      background: rgba(220, 38, 38, 0.16);
+      color: #b91c1c;
+      border: 1px solid rgba(220, 38, 38, 0.35);
+    }
+
+    [data-theme="dark"] .badge-pban {
+      color: #ff7070;
+      background: rgba(224, 82, 82, 0.25);
+      border-color: rgba(224, 82, 82, 0.5);
+    }
+
+    .owner-strip {
+      text-align: center;
+      padding: 16px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-top: 16px;
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 2px;
+      line-height: 2;
+      transition: all .35s;
+    }
+
+    .owner-strip strong {
+      color: var(--pu);
+    }
+
+    [data-theme="light"] .owner-strip strong {
+      color: var(--pu-d);
+    }
+
+    /* ── 동의 구역 ── */
+    .orn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .orn::before,
+    .orn::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--pu-l), transparent);
+    }
+
+    .orn span {
+      font-size: 12px;
+      color: var(--pu);
+      font-weight: 600;
+    }
+
+    [data-theme="dark"] .orn span {
+      color: var(--pu-d);
+    }
+
+    .agree-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .agree-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--bg2);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      cursor: pointer;
+      transition: all .2s;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0 1px 4px var(--shadow);
+    }
+
+    [data-theme="dark"] .agree-row {
+      background: var(--bg3);
+    }
+
+    .agree-row:hover {
+      border-color: var(--border-b);
+      box-shadow: 0 4px 16px var(--shadow);
+    }
+
+    .agree-row.on {
+      border-color: var(--pu);
+      background: var(--pu-ll);
+    }
+
+    [data-theme="dark"] .agree-row.on {
+      background: rgba(201, 168, 76, 0.06);
+    }
+
+    .chk-box {
+      width: 22px;
+      height: 22px;
+      border: 2px solid var(--border-b);
+      border-radius: 5px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+      background: var(--bg2);
+      pointer-events: none;
+    }
+
+    [data-theme="dark"] .chk-box {
+      background: var(--bg4);
+    }
+
+    .agree-row.on .chk-box {
+      background: var(--pu);
+      border-color: var(--pu);
+    }
+
+    .chk-mark {
+      opacity: 0;
+      transition: opacity .15s;
+      pointer-events: none;
+    }
+
+    .agree-row.on .chk-mark {
+      opacity: 1;
+    }
+
+    .agree-text strong {
+      display: block;
+      font-size: 13.5px;
+      color: var(--text);
+      margin-bottom: 3px;
+      font-weight: 700;
+      transition: color .35s;
+    }
+
+    .agree-row.on .agree-text strong {
+      color: var(--pu);
+    }
+
+    [data-theme="light"] .agree-row.on .agree-text strong {
+      color: var(--pu-d);
+    }
+
+    .agree-text span {
+      font-size: 12px;
+      color: var(--text-dim);
+      line-height: 1.65;
+      transition: color .35s;
+    }
+
+    .agree-all-row {
+      background: var(--pu-ll) !important;
+      border-color: var(--border-b) !important;
+    }
+
+    [data-theme="dark"] .agree-all-row {
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.08), rgba(201, 168, 76, 0.03)) !important;
+    }
+
+    .agree-all-row.on {
+      background: var(--pu-ll) !important;
+    }
+
+    [data-theme="dark"] .agree-all-row.on {
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.14), rgba(201, 168, 76, 0.06)) !important;
+    }
+
+    /* 버튼 */
+    .next-btn {
+      width: 100%;
+      margin-top: 6px;
+      padding: 17px;
+      background: linear-gradient(135deg, var(--pu) 0%, var(--pu-d) 100%);
+      border: none;
+      border-radius: 10px;
+      color: var(--btn-color);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: opacity .2s, transform .1s, box-shadow .2s, background .35s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px var(--shadow);
+    }
+
+    [data-theme="dark"] .next-btn {
+      background: linear-gradient(135deg, var(--pu) 0%, #a87e30 100%);
+      color: #07070a;
+    }
+
+    .next-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), transparent);
+      opacity: 0;
+      transition: opacity .2s;
+    }
+
+    .next-btn:hover:not(:disabled)::before {
+      opacity: 1;
+    }
+
+    .next-btn:hover:not(:disabled) {
+      box-shadow: 0 8px 32px var(--shadow);
+    }
+
+    .next-btn:active:not(:disabled) {
+      transform: scale(0.99);
+    }
+
+    .next-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    /* ── 폼 ── */
+    .form-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 4px 24px var(--shadow);
+      transition: all .35s;
+    }
+
+    .form-sec-title {
+      font-size: 11px;
+      letter-spacing: 3.5px;
+      color: var(--pu);
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color .35s;
+    }
+
+    [data-theme="light"] .form-sec-title {
+      color: var(--pu-d);
+    }
+
+    .form-sec-title::before {
+      content: '';
+      width: 3px;
+      height: 18px;
+      background: linear-gradient(180deg, var(--pu-l), var(--pu-d));
+      border-radius: 2px;
+    }
+
+    .fg {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .fg label {
+      font-size: 10.5px;
+      letter-spacing: 2px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: color .35s;
+    }
+
+    .fg label .req {
+      color: var(--pu);
+      margin-left: 3px;
+    }
+
+    .fg input,
+    .fg select {
+      background: var(--input-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 15px;
+      color: var(--text);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 13px;
+      outline: none;
+      transition: all .2s;
+      width: 100%;
+    }
+
+    .fg input::placeholder {
+      color: rgba(133, 127, 118, 0.4);
+    }
+
+    [data-theme="light"] .fg input::placeholder {
+      color: rgba(107, 114, 128, 0.45);
+    }
+
+    .fg input:focus,
+    .fg select:focus {
+      border-color: var(--pu);
+      background: var(--bg2);
+      box-shadow: 0 0 0 3px var(--pu-ll);
+    }
+
+    .fg.err input {
+      border-color: var(--red);
+    }
+
+    .err-msg {
+      font-size: 11px;
+      color: var(--red);
+      display: none;
+    }
+
+    .fg.err .err-msg {
+      display: block;
+    }
+
+    .fg select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%237c3aed' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 38px;
+    }
+
+    [data-theme="dark"] .fg select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23c9a84c' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+    .fg select option {
+      background: var(--bg3);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 20px 0;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    .form-divider::before,
+    .form-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .privacy-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--priv-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 13px 16px;
+      cursor: pointer;
+      transition: all .2s;
+      margin-bottom: 14px;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .privacy-row:hover {
+      border-color: var(--border-b);
+    }
+
+    .privacy-row.on {
+      border-color: var(--pu);
+      background: var(--pu-ll);
+    }
+
+    [data-theme="dark"] .privacy-row.on {
+      background: rgba(201, 168, 76, 0.05);
+    }
+
+    .privacy-row .chk-box {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .privacy-row.on .chk-box {
+      background: var(--pu);
+      border-color: var(--pu);
+    }
+
+    .privacy-row.on .chk-mark {
+      opacity: 1;
+    }
+
+    .privacy-row span {
+      font-size: 12.5px;
+      color: var(--text-dim);
+      transition: color .35s;
+    }
+
+    .privacy-row.on span {
+      color: var(--text);
+    }
+
+    [data-theme="light"] .privacy-row.on span {
+      color: var(--pu-d);
+    }
+
+    /* ── 모달 ── */
+    .modal-bg {
+      position: fixed;
+      inset: 0;
+      background: var(--modal-bg-overlay);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      backdrop-filter: blur(6px);
+    }
+
+    .modal-bg.show {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--bg2);
+      border: 1px solid var(--border-b);
+      border-radius: 16px;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      position: relative;
+      animation: mIn .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 20px 60px var(--shadow);
+      transition: background .35s;
+    }
+
+    @keyframes mIn {
+      from {
+        transform: scale(0.85) translateY(30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .modal-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--pu), transparent);
+      border-radius: 0 0 4px 4px;
+    }
+
+    .modal-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--pu-ll);
+      border: 2px solid var(--pu-l);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 22px;
+      font-size: 26px;
+      box-shadow: 0 0 30px var(--shadow);
+      transition: all .35s;
+    }
+
+    .modal h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 22px;
+      color: var(--pu);
+      margin-bottom: 10px;
+      transition: color .35s;
+    }
+
+    [data-theme="dark"] .modal h3 {
+      color: var(--pu-l);
+    }
+
+    [data-theme="light"] .modal h3 {
+      color: var(--pu-d);
+    }
+
+    .modal p {
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.9;
+      transition: color .35s;
+    }
+
+    .modal-close {
+      margin-top: 28px;
+      padding: 11px 36px;
+      background: var(--pu-ll);
+      border: 1px solid var(--border-b);
+      border-radius: 8px;
+      color: var(--pu);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    [data-theme="light"] .modal-close {
+      color: var(--pu-d);
+    }
+
+    .modal-close:hover {
+      background: var(--pu);
+      color: #fff;
+      box-shadow: 0 4px 16px var(--shadow);
+    }
+
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--spinner-bg);
+      border-top-color: var(--spinner-top);
+      border-radius: 50%;
+      animation: spin .6s linear infinite;
+      display: none;
+      flex-shrink: 0;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--text-dim);
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: color .2s;
+    }
+
+    .back-link:hover {
+      color: var(--pu);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 11px;
+      color: var(--footer-text);
+      letter-spacing: 2px;
+      line-height: 2.2;
+      transition: color .35s;
+    }
+
+    .footer strong {
+      color: var(--footer-strong);
+    }
+
+    .page {
+      animation: fadeUp .4s ease;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media(max-width:540px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .sb-line {
+        width: 36px;
+      }
+
+      .form-card {
+        padding: 22px 16px;
+      }
+
+      h1 {
+        letter-spacing: 1px;
+      }
+
+      .theme-toggle {
+        top: 14px;
+        right: 14px;
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- 테마 토글 -->
-<button class="theme-toggle" onclick="toggleTheme()" title="테마 전환">
-  <span class="icon-dark">🌙</span>
-  <span class="icon-light">☀️</span>
-</button>
+  <!-- 테마 토글 -->
+  <button class="theme-toggle" onclick="toggleTheme()" title="테마 전환">
+    <span class="icon-dark">🌙</span>
+    <span class="icon-light">☀️</span>
+  </button>
 
-<div class="wrap">
+  <div class="wrap">
 
-<header>
-  <div class="top-line"><div class="top-pill">Official Store</div></div>
-  <h1>Story HUB</h1>
-  <div class="h1-sub">PURCHASE AGREEMENT</div>
-  <p class="header-desc">구매 전 약관 및 운영지침을 반드시 확인해 주세요</p>
-</header>
-
-<div class="stepbar" id="stepbar">
-  <div class="sb-item active" id="si1"><div class="sb-num"><span>1</span></div><div class="sb-label">약관 확인</div></div>
-  <div class="sb-line" id="sl1"></div>
-  <div class="sb-item" id="si2"><div class="sb-num"><span>2</span></div><div class="sb-label">정보 입력</div></div>
-  <div class="sb-line" id="sl2"></div>
-  <div class="sb-item" id="si3"><div class="sb-num"><span>3</span></div><div class="sb-label">완료</div></div>
-</div>
-
-<!-- PAGE 1 -->
-<div id="p1" class="page">
-  <div class="tab-nav">
-    <button class="tab-btn on" id="tab-terms" onclick="switchTab('terms')">📜 스토어 이용약관</button>
-    <button class="tab-btn" id="tab-rules" onclick="switchTab('rules')">⚖️ 운영지침</button>
-  </div>
-
-  <div class="tab-panel on" id="panel-terms">
-    <div class="sec-card open" id="sc0">
-      <div class="sec-hd" onclick="toggleSec('sc0')"><div class="sec-title"><div class="sec-icon">📜</div>이용 약관 개요</div><div class="sec-toggle">+</div></div>
-      <div class="sec-bd"><p class="terms-intro">본 약관은 본 스토어에서 제공되는 모든 상품 및 서비스(이하 "상품")의 거래 시 적용되며, 구매자와 판매자 간의 권리와 의무를 규정합니다.</p></div>
-    </div>
-    <div class="sec-card" id="sc1">
-      <div class="sec-hd" onclick="toggleSec('sc1')"><div class="sec-title"><div class="sec-icon">🔔</div>상품 거래 시 유의사항</div><div class="sec-toggle">+</div></div>
-      <div class="sec-bd"><ul class="terms-list">
-        <li data-n="1">본 스토어에서 거래되는 모든 상품은 구매자와 판매자 모두의 안전을 위해 계좌이체를 원칙으로 진행됩니다. 단, 법령상 요구되는 경우 에스크로 서비스 등 안전거래 수단을 제공합니다.</li>
-        <li data-n="2">판매자는 구매자로부터 최소한의 개인정보(성명, 휴대전화, 입금자명)를 수집할 수 있으며, 허위 정보 제공 또는 개인정보 제공 미동의 시 거래를 거부할 수 있습니다.</li>
-        <li data-n="3">거래 규정을 숙지하지 않고 발생하는 모든 책임은 구매자 본인에게 있습니다.</li>
-      </ul></div>
-    </div>
-    <div class="sec-card" id="sc2">
-      <div class="sec-hd" onclick="toggleSec('sc2')"><div class="sec-title"><div class="sec-icon">🔄</div>교환 및 환불</div><div class="sec-toggle">+</div></div>
-      <div class="sec-bd"><ul class="terms-list">
-        <li data-n="1">디지털 상품은 특성상 다운로드 또는 이용이 시작된 경우 환불이 불가능합니다.</li>
-        <li data-n="2">상품 자체의 결함이나 법령상 보장되는 사유가 있을 경우 구매자는 교환 또는 환불을 요청할 권리가 있습니다.</li>
-        <li data-n="3">환불 및 교환은 「전자상거래법」에 따른 소비자 권리를 보장합니다.</li>
-      </ul></div>
-    </div>
-    <div class="sec-card" id="sc3">
-      <div class="sec-hd" onclick="toggleSec('sc3')"><div class="sec-title"><div class="sec-icon">🔒</div>개인정보 수집 및 이용</div><div class="sec-toggle">+</div></div>
-      <div class="sec-bd"><ul class="terms-list">
-        <li data-n="1">본 스토어는 거래 시 구매자의 성명, 휴대전화, 입금자명 등의 개인정보를 수집할 수 있습니다.</li>
-        <li data-n="2">수집된 개인정보는 거래 장부 작성, 재판매 방지, 신원 확인 등의 목적으로만 사용되며 안전하게 보호됩니다.</li>
-        <li data-n="3">허위 정보 제공이 확인될 경우 판매자는 거래를 거부하거나 내부 블랙리스트에 등록할 수 있습니다. 단, 블랙리스트 정보는 외부에 공개되지 않습니다.</li>
-        <li data-n="4">구매자는 개인정보 수집 및 이용에 동의하지 않을 수 있으며, 이 경우 거래가 제한될 수 있습니다.</li>
-      </ul></div>
-    </div>
-    <div class="sec-card" id="sc4">
-      <div class="sec-hd" onclick="toggleSec('sc4')"><div class="sec-title"><div class="sec-icon">©</div>저작물 보호</div><div class="sec-toggle">+</div></div>
-      <div class="sec-bd"><ul class="terms-list">
-        <li data-n="1">본 스토어에서 판매되는 모든 상품은 판매자 또는 그룹이 직접 제작한 창작물로서 저작권법에 의해 보호됩니다.</li>
-        <li data-n="2">구매자는 저작물에 대해 무단 복제, 수정, 2차 배포를 할 수 없습니다.</li>
-        <li data-n="3">저작권 침해가 발생할 경우 민사상 손해배상 청구 및 형사 고발 등 모든 법적 절차를 진행하며 무관용 원칙에 따라 대응합니다.</li>
-      </ul></div>
-    </div>
-    <div class="sec-card" id="sc5">
-      <div class="sec-hd" onclick="toggleSec('sc5')"><div class="sec-title"><div class="sec-icon">💳</div>후불 거래</div><div class="sec-toggle">+</div></div>
-      <div class="sec-bd"><ul class="terms-list">
-        <li data-n="1">후불 거래란 구매자가 상품을 먼저 이용한 후 일정 기한 내에 대금을 지급하는 방식을 말합니다.</li>
-        <li data-n="2">후불 거래는 판매자와 구매자 간 별도의 합의가 있는 경우에만 가능하며, 기한과 금액은 계약 시 명시됩니다.</li>
-        <li data-n="3">약속된 기한 내 미납 시 판매자는 민법상 지연 손해배상 청구 및 민·형사상 법적 조치를 취할 수 있습니다.</li>
-        <li data-n="4">본 스토어는 후불 거래에 직접 개입하지 않으며, 모든 법적·금전적 책임은 당사자 본인에게 귀속됩니다.</li>
-      </ul></div>
-    </div>
-    <div class="sec-card" id="sc6">
-      <div class="sec-hd" onclick="toggleSec('sc6')"><div class="sec-title"><div class="sec-icon">🔁</div>구독제(정기결제)</div><div class="sec-toggle">+</div></div>
-      <div class="sec-bd"><ul class="terms-list">
-        <li data-n="1">구독 상품은 일정 주기(월/분기/연간 등)마다 자동으로 결제가 이루어지는 서비스입니다.</li>
-        <li data-n="2">결제 주기, 금액, 자동 결제 여부는 상품 안내 및 결제 화면에 명확히 표시됩니다.</li>
-        <li data-n="3">구매자는 언제든지 구독 해지를 요청할 수 있으며, 해지 신청일 이후 차기 결제분부터는 요금이 청구되지 않습니다.</li>
-        <li data-n="4">이미 결제된 기간의 요금은 원칙적으로 환불되지 않습니다. 단, 최초 결제일로부터 7일 이내 청약 철회가 가능합니다.</li>
-        <li data-n="5">구독 요금 변경 시 판매자는 최소 7일 전 고지해야 하며, 구매자는 미동의 시 구독을 해지할 수 있습니다.</li>
-      </ul></div>
-    </div>
-    <div class="sec-card" id="sc7">
-      <div class="sec-hd" onclick="toggleSec('sc7')"><div class="sec-title"><div class="sec-icon">⚖</div>책임의 한계</div><div class="sec-toggle">+</div></div>
-      <div class="sec-bd"><ul class="terms-list">
-        <li data-n="1">본 스토어는 판매자와 구매자 간 거래를 중개하는 플랫폼 역할을 하며, 당사자 간 분쟁에 대해 직접적인 책임을 지지 않습니다.</li>
-        <li data-n="2">마케팅 직원 및 중간 소개인은 홍보·안내 업무만을 수행하며, 상품의 품질·하자·환불·보상에 대한 결정 권한이나 책임을 부담하지 않습니다.</li>
-        <li data-n="3">환불, 교환, 하자 보상 등의 최종 책임은 판매자에게 있으며, 마케팅 직원 개인에게는 귀속되지 않습니다.</li>
-        <li data-n="4">단, 관련 법령에 따라 본 스토어가 부담하여야 하는 책임은 예외로 합니다.</li>
-      </ul></div>
-    </div>
-  </div>
-
-  <div class="tab-panel" id="panel-rules">
-    <div class="notice-banner">
-      <div class="notice-banner-title">공통 처벌 기준</div>
-      <div class="notice-item"><span class="notice-plus">+</span><span>경고 5회가 누적된다면 디스코드 차단처리 됩니다.</span></div>
-      <div class="notice-item"><span class="notice-plus">+</span><span>관리자 또는 스태프의 판단에 따라 즉시차단 또는 즉시 경고 지급이 되는 상황이 발생될 수 있습니다.</span></div>
-      <div class="notice-item"><span class="notice-plus">+</span><span>커뮤니티 입장 순간부터 서버규칙을 정독하지 않아도 확인한 것으로 간주하여 동의함으로 간주합니다.</span></div>
-    </div>
-    <div class="rule-card"><div class="rule-num">1</div><div class="rule-content"><div class="rule-main">타 커뮤니티 언급, 비방 등 관련된 이야기<span class="rule-badge badge-warn">경고</span></div><div class="rule-sub">해당 규칙은 필요에 의해 추가되었습니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">2</div><div class="rule-content"><div class="rule-main">자유채팅에서 분쟁 및 욕설 사용<span class="rule-badge badge-warn">경고 2회</span><span class="rule-badge badge-ban">심할 경우 차단</span></div><div class="rule-sub">분쟁 시 (스태프) 호출해 주시면 됩니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">3</div><div class="rule-content"><div class="rule-main">타인 비방 또는 조롱 행위<span class="rule-badge badge-ban">강력 처벌</span></div><div class="rule-sub">서로를 존중하고 배려하는 차원에서 추가되었습니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">4</div><div class="rule-content"><div class="rule-main">비정상적인 방법으로 이득 취득 / 리셀 및 재판매<span class="rule-badge badge-pban">영구차단</span></div><div class="rule-sub">리셀 또는 타인에게 판매는 절대적으로 금지입니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">5</div><div class="rule-content"><div class="rule-main">타인의 계정·비밀번호 등 개인정보 공유<span class="rule-badge badge-ban">즉시 차단</span></div><div class="rule-sub">개인정보 및 저작권 보호는 중요한 부분입니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">6</div><div class="rule-content"><div class="rule-main">타 커뮤니티에서 차단 이력 보유자의 문제 행동<span class="rule-badge badge-ban">즉시 차단</span></div><div class="rule-sub">본인의 행실에 따라 결정합니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">7</div><div class="rule-content"><div class="rule-main">Story 커뮤니티 링크 외 모든 링크 공유<span class="rule-badge badge-ban">차단</span></div><div class="rule-sub">인원 유출 방지 및 불미스러운 일을 막기 위해 추가하였습니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">8</div><div class="rule-content"><div class="rule-main">모든 처벌은 관리자 판단에 따라 강도가 달라질 수 있습니다</div><div class="rule-sub">처벌에 불만이 있으시면 직접 관리자가 되시면 됩니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">9</div><div class="rule-content"><div class="rule-main">상업적 목적의 커뮤니티 이용<span class="rule-badge badge-ban">서버 차단</span></div><div class="rule-sub">금전적 이유로 인한 사건사고를 줄이고자 추가한 항목입니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">10</div><div class="rule-content"><div class="rule-main">부적절한 닉네임 사용<span class="rule-badge badge-warn">경고</span></div><div class="rule-sub">누군가에게 불쾌감을 줄 수 있다는 판단하에 추가하였습니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">11</div><div class="rule-content"><div class="rule-main">커뮤니티 입장 후 이유 없이 퇴장 반복<span class="rule-badge badge-pban">영구차단</span></div><div class="rule-sub">이유 없이 무기한 들락날락은 차단입니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">12</div><div class="rule-content"><div class="rule-main">채팅에 효과를 주는 채팅 작성 (도배성)<span class="rule-badge badge-warn">경고</span></div><div class="rule-sub">도배 상황 방지를 위해 추가하였습니다.</div></div></div>
-    <div class="rule-card"><div class="rule-num">13</div><div class="rule-content"><div class="rule-main">판매 상품의 2차 배포 · 수정 · 무단 양도<span class="rule-badge badge-pban">영구차단</span></div><div class="rule-sub">상품 구매 후 총관리자 직급만 사용 가능합니다. 무단 양도·배포 시 손해배상금을 청구합니다.</div></div></div>
-    <div class="owner-strip">
-      <div>최초 수정일 : <strong>2026년 1월 1일</strong></div>
-      <div>Story Hub Owner : <strong>sukong_</strong></div>
-    </div>
-  </div>
-
-  <div class="orn"><span>✦ 약관 동의 ✦</span></div>
-  <div class="agree-group">
-    <div class="agree-row" id="chk-terms" onclick="toggleChk('chk-terms','terms')">
-      <div class="chk-box"><svg class="chk-mark" width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="var(--chk-stroke)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="agree-text"><strong>스토어 이용 약관에 동의합니다</strong><span>이용약관, 교환·환불, 개인정보, 저작물 보호, 후불 거래, 구독제, 책임의 한계</span></div>
-    </div>
-    <div class="agree-row" id="chk-rules" onclick="toggleChk('chk-rules','rules')">
-      <div class="chk-box"><svg class="chk-mark" width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="var(--chk-stroke)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="agree-text"><strong>운영지침에 동의합니다</strong><span>Story HUB 커뮤니티 운영지침 및 처벌 기준 전체 확인 및 동의</span></div>
-    </div>
-    <div class="agree-row agree-all-row" id="chk-all" onclick="toggleAll()">
-      <div class="chk-box"><svg class="chk-mark" width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="var(--chk-stroke)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="agree-text"><strong>위 약관 및 운영지침 전체에 동의합니다</strong><span>모든 항목을 확인하였으며 전체 동의합니다</span></div>
-    </div>
-  </div>
-  <button class="next-btn" id="nextBtn" onclick="goP2()" disabled>다음 단계 &mdash; 구매 정보 입력</button>
-</div>
-
-<!-- PAGE 2 -->
-<div id="p2" class="page" style="display:none;">
-  <div class="form-card">
-    <div class="form-sec-title">상품 정보</div>
-    <div class="fg" id="fg-product">
-      <label>상품명 <span class="req">*</span></label>
-      <input type="text" id="i-product" placeholder="구매하실 상품명을 입력해 주세요">
-      <span class="err-msg">상품명을 입력해 주세요.</span>
-    </div>
-    <div class="form-row">
-      <div class="fg" id="fg-buytype">
-        <label>구매 타입</label>
-        <select id="i-buytype">
-          <option value="">선택</option>
-          <option>일반 구매</option>
-          <option>구독 (정기결제)</option>
-          <option>후불 거래</option>
-          <option>기타</option>
-        </select>
+    <header>
+      <div class="top-line">
+        <div class="top-pill">Official Store</div>
       </div>
-      <div class="fg" id="fg-price">
-        <label>판매 가격 <span class="req">*</span></label>
-        <input type="text" id="i-price" placeholder="예: 10,000원">
-        <span class="err-msg">가격을 입력해 주세요.</span>
+      <h1>Story HUB</h1>
+      <div class="h1-sub">PURCHASE AGREEMENT</div>
+      <p class="header-desc">구매 전 약관 및 운영지침을 반드시 확인해 주세요</p>
+    </header>
+
+    <div class="stepbar" id="stepbar">
+      <div class="sb-item active" id="si1">
+        <div class="sb-num"><span>1</span></div>
+        <div class="sb-label">약관 확인</div>
+      </div>
+      <div class="sb-line" id="sl1"></div>
+      <div class="sb-item" id="si2">
+        <div class="sb-num"><span>2</span></div>
+        <div class="sb-label">정보 입력</div>
+      </div>
+      <div class="sb-line" id="sl2"></div>
+      <div class="sb-item" id="si3">
+        <div class="sb-num"><span>3</span></div>
+        <div class="sb-label">완료</div>
       </div>
     </div>
-    <div class="fg">
-      <label>사용되는 서버</label>
-      <input type="text" id="i-server" placeholder="">
-    </div>
-    <div class="form-row">
-      <div class="fg"><label>소속서버 직급</label><input type="text" id="i-rank" placeholder="예: 일반 유저, 관리자"></div>
-      <div class="fg"><label>디스코드 링크</label><input type="text" id="i-discord" placeholder="discord.gg/..."></div>
-    </div>
-    <div class="form-divider">구매자 정보</div>
-    <div class="form-row">
-      <div class="fg" id="fg-name">
-        <label>구매자 성함 <span class="req">*</span></label>
-        <input type="text" id="i-name" placeholder="실명 입력">
-        <span class="err-msg">성함을 입력해 주세요.</span>
+
+    <!-- PAGE 1 -->
+    <div id="p1" class="page">
+      <div class="tab-nav">
+        <button class="tab-btn on" id="tab-terms" onclick="switchTab('terms')">📜 스토어 이용약관</button>
+        <button class="tab-btn" id="tab-rules" onclick="switchTab('rules')">⚖️ 운영지침</button>
       </div>
-      <div class="fg" id="fg-phone">
-        <label>구매자 전화번호 <span class="req">*</span></label>
-        <input type="tel" id="i-phone" placeholder="010-0000-0000">
-        <span class="err-msg">전화번호를 입력해 주세요.</span>
+
+      <div class="tab-panel on" id="panel-terms">
+        <div class="sec-card open" id="sc0">
+          <div class="sec-hd" onclick="toggleSec('sc0')">
+            <div class="sec-title">
+              <div class="sec-icon">📜</div>이용 약관 개요
+            </div>
+            <div class="sec-toggle">+</div>
+          </div>
+          <div class="sec-bd">
+            <p class="terms-intro">본 약관은 본 스토어에서 제공되는 모든 상품 및 서비스(이하 "상품")의 거래 시 적용되며, 구매자와 판매자 간의 권리와 의무를 규정합니다.</p>
+          </div>
+        </div>
+        <div class="sec-card" id="sc1">
+          <div class="sec-hd" onclick="toggleSec('sc1')">
+            <div class="sec-title">
+              <div class="sec-icon">🔔</div>상품 거래 시 유의사항
+            </div>
+            <div class="sec-toggle">+</div>
+          </div>
+          <div class="sec-bd">
+            <ul class="terms-list">
+              <li data-n="1">본 스토어에서 거래되는 모든 상품은 구매자와 판매자 모두의 안전을 위해 계좌이체를 원칙으로 진행됩니다. 단, 법령상 요구되는 경우 에스크로 서비스 등 안전거래
+                수단을 제공합니다.</li>
+              <li data-n="2">판매자는 구매자로부터 최소한의 개인정보(성명, 휴대전화, 입금자명)를 수집할 수 있으며, 허위 정보 제공 또는 개인정보 제공 미동의 시 거래를 거부할 수 있습니다.
+              </li>
+              <li data-n="3">거래 규정을 숙지하지 않고 발생하는 모든 책임은 구매자 본인에게 있습니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sec-card" id="sc2">
+          <div class="sec-hd" onclick="toggleSec('sc2')">
+            <div class="sec-title">
+              <div class="sec-icon">🔄</div>교환 및 환불
+            </div>
+            <div class="sec-toggle">+</div>
+          </div>
+          <div class="sec-bd">
+            <ul class="terms-list">
+              <li data-n="1">디지털 상품은 특성상 다운로드 또는 이용이 시작된 경우 환불이 불가능합니다.</li>
+              <li data-n="2">상품 자체의 결함이나 법령상 보장되는 사유가 있을 경우 구매자는 교환 또는 환불을 요청할 권리가 있습니다.</li>
+              <li data-n="3">환불 및 교환은 「전자상거래법」에 따른 소비자 권리를 보장합니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sec-card" id="sc3">
+          <div class="sec-hd" onclick="toggleSec('sc3')">
+            <div class="sec-title">
+              <div class="sec-icon">🔒</div>개인정보 수집 및 이용
+            </div>
+            <div class="sec-toggle">+</div>
+          </div>
+          <div class="sec-bd">
+            <ul class="terms-list">
+              <li data-n="1">본 스토어는 거래 시 구매자의 성명, 휴대전화, 입금자명 등의 개인정보를 수집할 수 있습니다.</li>
+              <li data-n="2">수집된 개인정보는 거래 장부 작성, 재판매 방지, 신원 확인 등의 목적으로만 사용되며 안전하게 보호됩니다.</li>
+              <li data-n="3">허위 정보 제공이 확인될 경우 판매자는 거래를 거부하거나 내부 블랙리스트에 등록할 수 있습니다. 단, 블랙리스트 정보는 외부에 공개되지 않습니다.</li>
+              <li data-n="4">구매자는 개인정보 수집 및 이용에 동의하지 않을 수 있으며, 이 경우 거래가 제한될 수 있습니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sec-card" id="sc4">
+          <div class="sec-hd" onclick="toggleSec('sc4')">
+            <div class="sec-title">
+              <div class="sec-icon">©</div>저작물 보호
+            </div>
+            <div class="sec-toggle">+</div>
+          </div>
+          <div class="sec-bd">
+            <ul class="terms-list">
+              <li data-n="1">본 스토어에서 판매되는 모든 상품은 판매자 또는 그룹이 직접 제작한 창작물로서 저작권법에 의해 보호됩니다.</li>
+              <li data-n="2">구매자는 저작물에 대해 무단 복제, 수정, 2차 배포를 할 수 없습니다.</li>
+              <li data-n="3">저작권 침해가 발생할 경우 민사상 손해배상 청구 및 형사 고발 등 모든 법적 절차를 진행하며 무관용 원칙에 따라 대응합니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sec-card" id="sc5">
+          <div class="sec-hd" onclick="toggleSec('sc5')">
+            <div class="sec-title">
+              <div class="sec-icon">💳</div>후불 거래
+            </div>
+            <div class="sec-toggle">+</div>
+          </div>
+          <div class="sec-bd">
+            <ul class="terms-list">
+              <li data-n="1">후불 거래란 구매자가 상품을 먼저 이용한 후 일정 기한 내에 대금을 지급하는 방식을 말합니다.</li>
+              <li data-n="2">후불 거래는 판매자와 구매자 간 별도의 합의가 있는 경우에만 가능하며, 기한과 금액은 계약 시 명시됩니다.</li>
+              <li data-n="3">약속된 기한 내 미납 시 판매자는 민법상 지연 손해배상 청구 및 민·형사상 법적 조치를 취할 수 있습니다.</li>
+              <li data-n="4">본 스토어는 후불 거래에 직접 개입하지 않으며, 모든 법적·금전적 책임은 당사자 본인에게 귀속됩니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sec-card" id="sc6">
+          <div class="sec-hd" onclick="toggleSec('sc6')">
+            <div class="sec-title">
+              <div class="sec-icon">🔁</div>구독제(정기결제)
+            </div>
+            <div class="sec-toggle">+</div>
+          </div>
+          <div class="sec-bd">
+            <ul class="terms-list">
+              <li data-n="1">구독 상품은 일정 주기(월/분기/연간 등)마다 자동으로 결제가 이루어지는 서비스입니다.</li>
+              <li data-n="2">결제 주기, 금액, 자동 결제 여부는 상품 안내 및 결제 화면에 명확히 표시됩니다.</li>
+              <li data-n="3">구매자는 언제든지 구독 해지를 요청할 수 있으며, 해지 신청일 이후 차기 결제분부터는 요금이 청구되지 않습니다.</li>
+              <li data-n="4">이미 결제된 기간의 요금은 원칙적으로 환불되지 않습니다. 단, 최초 결제일로부터 7일 이내 청약 철회가 가능합니다.</li>
+              <li data-n="5">구독 요금 변경 시 판매자는 최소 7일 전 고지해야 하며, 구매자는 미동의 시 구독을 해지할 수 있습니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sec-card" id="sc7">
+          <div class="sec-hd" onclick="toggleSec('sc7')">
+            <div class="sec-title">
+              <div class="sec-icon">⚖</div>책임의 한계
+            </div>
+            <div class="sec-toggle">+</div>
+          </div>
+          <div class="sec-bd">
+            <ul class="terms-list">
+              <li data-n="1">본 스토어는 판매자와 구매자 간 거래를 중개하는 플랫폼 역할을 하며, 당사자 간 분쟁에 대해 직접적인 책임을 지지 않습니다.</li>
+              <li data-n="2">마케팅 직원 및 중간 소개인은 홍보·안내 업무만을 수행하며, 상품의 품질·하자·환불·보상에 대한 결정 권한이나 책임을 부담하지 않습니다.</li>
+              <li data-n="3">환불, 교환, 하자 보상 등의 최종 책임은 판매자에게 있으며, 마케팅 직원 개인에게는 귀속되지 않습니다.</li>
+              <li data-n="4">단, 관련 법령에 따라 본 스토어가 부담하여야 하는 책임은 예외로 합니다.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="fg" id="fg-account">
-      <label>구매자 계좌번호 <span class="req">*</span></label>
-      <input type="text" id="i-account" placeholder="은행명 + 계좌번호 (예: 카카오뱅크 333-01-0000000)">
-      <span class="err-msg">계좌번호를 입력해 주세요.</span>
-    </div>
-    <div class="privacy-row" id="priv-row" onclick="togglePriv()">
-      <div class="chk-box" id="priv-chk">
-        <svg class="chk-mark" width="10" height="9" viewBox="0 0 12 10" fill="none">
-          <path d="M1 5l3.5 3.5L11 1" stroke="var(--chk-stroke)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+
+      <div class="tab-panel" id="panel-rules">
+        <div class="notice-banner">
+          <div class="notice-banner-title">공통 처벌 기준</div>
+          <div class="notice-item"><span class="notice-plus">+</span><span>경고 5회가 누적된다면 디스코드 차단처리 됩니다.</span></div>
+          <div class="notice-item"><span class="notice-plus">+</span><span>관리자 또는 스태프의 판단에 따라 즉시차단 또는 즉시 경고 지급이 되는 상황이
+              발생될 수 있습니다.</span></div>
+          <div class="notice-item"><span class="notice-plus">+</span><span>커뮤니티 입장 순간부터 서버규칙을 정독하지 않아도 확인한 것으로 간주하여
+              동의함으로 간주합니다.</span></div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">1</div>
+          <div class="rule-content">
+            <div class="rule-main">타 커뮤니티 언급, 비방 등 관련된 이야기<span class="rule-badge badge-warn">경고</span></div>
+            <div class="rule-sub">해당 규칙은 필요에 의해 추가되었습니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">2</div>
+          <div class="rule-content">
+            <div class="rule-main">자유채팅에서 분쟁 및 욕설 사용<span class="rule-badge badge-warn">경고 2회</span><span
+                class="rule-badge badge-ban">심할 경우 차단</span></div>
+            <div class="rule-sub">분쟁 시 (스태프) 호출해 주시면 됩니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">3</div>
+          <div class="rule-content">
+            <div class="rule-main">타인 비방 또는 조롱 행위<span class="rule-badge badge-ban">강력 처벌</span></div>
+            <div class="rule-sub">서로를 존중하고 배려하는 차원에서 추가되었습니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">4</div>
+          <div class="rule-content">
+            <div class="rule-main">비정상적인 방법으로 이득 취득 / 리셀 및 재판매<span class="rule-badge badge-pban">영구차단</span></div>
+            <div class="rule-sub">리셀 또는 타인에게 판매는 절대적으로 금지입니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">5</div>
+          <div class="rule-content">
+            <div class="rule-main">타인의 계정·비밀번호 등 개인정보 공유<span class="rule-badge badge-ban">즉시 차단</span></div>
+            <div class="rule-sub">개인정보 및 저작권 보호는 중요한 부분입니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">6</div>
+          <div class="rule-content">
+            <div class="rule-main">타 커뮤니티에서 차단 이력 보유자의 문제 행동<span class="rule-badge badge-ban">즉시 차단</span></div>
+            <div class="rule-sub">본인의 행실에 따라 결정합니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">7</div>
+          <div class="rule-content">
+            <div class="rule-main">Story 커뮤니티 링크 외 모든 링크 공유<span class="rule-badge badge-ban">차단</span></div>
+            <div class="rule-sub">인원 유출 방지 및 불미스러운 일을 막기 위해 추가하였습니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">8</div>
+          <div class="rule-content">
+            <div class="rule-main">모든 처벌은 관리자 판단에 따라 강도가 달라질 수 있습니다</div>
+            <div class="rule-sub">처벌에 불만이 있으시면 직접 관리자가 되시면 됩니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">9</div>
+          <div class="rule-content">
+            <div class="rule-main">상업적 목적의 커뮤니티 이용<span class="rule-badge badge-ban">서버 차단</span></div>
+            <div class="rule-sub">금전적 이유로 인한 사건사고를 줄이고자 추가한 항목입니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">10</div>
+          <div class="rule-content">
+            <div class="rule-main">부적절한 닉네임 사용<span class="rule-badge badge-warn">경고</span></div>
+            <div class="rule-sub">누군가에게 불쾌감을 줄 수 있다는 판단하에 추가하였습니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">11</div>
+          <div class="rule-content">
+            <div class="rule-main">커뮤니티 입장 후 이유 없이 퇴장 반복<span class="rule-badge badge-pban">영구차단</span></div>
+            <div class="rule-sub">이유 없이 무기한 들락날락은 차단입니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">12</div>
+          <div class="rule-content">
+            <div class="rule-main">채팅에 효과를 주는 채팅 작성 (도배성)<span class="rule-badge badge-warn">경고</span></div>
+            <div class="rule-sub">도배 상황 방지를 위해 추가하였습니다.</div>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">13</div>
+          <div class="rule-content">
+            <div class="rule-main">판매 상품의 2차 배포 · 수정 · 무단 양도<span class="rule-badge badge-pban">영구차단</span></div>
+            <div class="rule-sub">상품 구매 후 총관리자 직급만 사용 가능합니다. 무단 양도·배포 시 손해배상금을 청구합니다.</div>
+          </div>
+        </div>
+        <div class="owner-strip">
+          <div>최초 수정일 : <strong>2026년 1월 1일</strong></div>
+          <div>Story Hub Owner : <strong>sukong_</strong></div>
+        </div>
       </div>
-      <span>개인정보 수집 및 이용에 동의합니다 <strong style="color:var(--pu)">*</strong></span>
+
+      <div class="orn"><span>✦ 약관 동의 ✦</span></div>
+      <div class="agree-group">
+        <div class="agree-row" id="chk-terms" onclick="toggleChk('chk-terms','terms')">
+          <div class="chk-box"><svg class="chk-mark" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M1 5l3.5 3.5L11 1" stroke="var(--chk-stroke)" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+          <div class="agree-text"><strong>스토어 이용 약관에 동의합니다</strong><span>이용약관, 교환·환불, 개인정보, 저작물 보호, 후불 거래, 구독제, 책임의
+              한계</span></div>
+        </div>
+        <div class="agree-row" id="chk-rules" onclick="toggleChk('chk-rules','rules')">
+          <div class="chk-box"><svg class="chk-mark" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M1 5l3.5 3.5L11 1" stroke="var(--chk-stroke)" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+          <div class="agree-text"><strong>운영지침에 동의합니다</strong><span>Story HUB 커뮤니티 운영지침 및 처벌 기준 전체 확인 및 동의</span></div>
+        </div>
+        <div class="agree-row agree-all-row" id="chk-all" onclick="toggleAll()">
+          <div class="chk-box"><svg class="chk-mark" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M1 5l3.5 3.5L11 1" stroke="var(--chk-stroke)" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+          <div class="agree-text"><strong>위 약관 및 운영지침 전체에 동의합니다</strong><span>모든 항목을 확인하였으며 전체 동의합니다</span></div>
+        </div>
+      </div>
+      <button class="next-btn" id="nextBtn" onclick="goP2()" disabled>다음 단계 &mdash; 구매 정보 입력</button>
     </div>
-    <button class="next-btn" id="submitBtn" onclick="doSubmit()">
-      <span id="submit-txt">📜 &nbsp;영수증 발송 및 완료</span>
-      <div class="spinner" id="spin"></div>
-    </button>
+
+    <!-- PAGE 2 -->
+    <div id="p2" class="page" style="display:none;">
+      <div class="form-card">
+        <div class="form-sec-title">상품 정보</div>
+        <div class="fg" id="fg-product">
+          <label>상품명 <span class="req">*</span></label>
+          <input type="text" id="i-product" placeholder="구매하실 상품명을 입력해 주세요">
+          <span class="err-msg">상품명을 입력해 주세요.</span>
+        </div>
+        <div class="form-row">
+          <div class="fg" id="fg-buytype">
+            <label>구매 타입</label>
+            <select id="i-buytype">
+              <option value="">선택</option>
+              <option>DRM (난독화)</option>
+              <option>구독,후불 거래</option>
+              <option>오픈소스 (풀소스)</option>
+              <option>기타 (외주)</option>
+            </select>
+          </div>
+          <div class="fg" id="fg-price">
+            <label>판매 가격 <span class="req">*</span></label>
+            <input type="text" id="i-price" placeholder="예: 10,000원">
+            <span class="err-msg">가격을 입력해 주세요.</span>
+          </div>
+        </div>
+        <div class="fg">
+          <label>사용되는 서버</label>
+          <input type="text" id="i-server" placeholder="예: Turn City, 모찌서버 등">
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>소속서버 직급</label><input type="text" id="i-rank" placeholder="예: 일반 유저, 관리자"></div>
+          <div class="fg"><label>디스코드 태그 / ID</label><input type="text" id="i-discord-id"
+              placeholder="예: 123456789012345678 또는 뽀삐"></div>
+        </div>
+        <div class="fg"><label>디스코드 링크</label><input type="text" id="i-discord" placeholder="discord.gg/..."></div>
+        <div class="form-divider">구매자 정보</div>
+        <div class="form-row">
+          <div class="fg" id="fg-name">
+            <label>구매자 성함 <span class="req">*</span></label>
+            <input type="text" id="i-name" placeholder="실명 입력">
+            <span class="err-msg">성함을 입력해 주세요.</span>
+          </div>
+          <div class="fg" id="fg-phone">
+            <label>구매자 전화번호 <span class="req">*</span></label>
+            <input type="tel" id="i-phone" placeholder="010-0000-0000">
+            <span class="err-msg">전화번호를 입력해 주세요.</span>
+          </div>
+        </div>
+        <div class="fg" id="fg-account">
+          <label>구매자 계좌번호 <span class="req">*</span></label>
+          <input type="text" id="i-account" placeholder="은행명 + 계좌번호 (예: 카카오뱅크 333-01-0000000)">
+          <span class="err-msg">계좌번호를 입력해 주세요.</span>
+        </div>
+        <div class="privacy-row" id="priv-row" onclick="togglePriv()">
+          <div class="chk-box" id="priv-chk">
+            <svg class="chk-mark" width="10" height="9" viewBox="0 0 12 10" fill="none">
+              <path d="M1 5l3.5 3.5L11 1" stroke="var(--chk-stroke)" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span>개인정보 수집 및 이용에 동의합니다 <strong style="color:var(--pu)">*</strong></span>
+        </div>
+        <button class="next-btn" id="submitBtn" onclick="doSubmit()">
+          <span id="submit-txt">📜 &nbsp;영수증 발송 및 완료</span>
+          <div class="spinner" id="spin"></div>
+        </button>
+      </div>
+      <div class="back-link" onclick="goP1()">← 약관으로 돌아가기</div>
+    </div>
+
+    <div class="footer">Story HUB &copy; 2026 &nbsp;·&nbsp; All Rights Reserved<br><strong>Owner : sukong_</strong>
+    </div>
   </div>
-  <div class="back-link" onclick="goP1()">← 약관으로 돌아가기</div>
-</div>
 
-<div class="footer">Story HUB &copy; 2026 &nbsp;·&nbsp; All Rights Reserved<br><strong>Owner : sukong_</strong></div>
-</div>
-
-<div class="modal-bg" id="modal">
-  <div class="modal">
-    <div class="modal-glow"></div>
-    <div class="modal-icon">✦</div>
-    <h3>구매 완료</h3>
-    <p>영수증이 성공적으로 전송되었습니다.<br>Story HUB을 이용해 주셔서 감사합니다.</p>
-    <button class="modal-close" onclick="closeModal()">확인</button>
+  <div class="modal-bg" id="modal">
+    <div class="modal">
+      <div class="modal-glow"></div>
+      <div class="modal-icon">✦</div>
+      <h3>구매 완료</h3>
+      <p>영수증이 성공적으로 전송되었습니다.<br>Story HUB을 이용해 주셔서 감사합니다.</p>
+      <button class="modal-close" onclick="closeModal()">확인</button>
+    </div>
   </div>
-</div>
 
-<script>
-const WH="/webhook";
+  <script>
+    const WH = "/webhook";
 
-// ── 테마 ──
-function toggleTheme(){
-  var html=document.documentElement;
-  var next=html.getAttribute('data-theme')==='dark'?'light':'dark';
-  html.setAttribute('data-theme',next);
-  try{localStorage.setItem('sh-theme',next);}catch(e){}
-}
-(function(){
-  try{
-    var saved=localStorage.getItem('sh-theme');
-    if(saved) document.documentElement.setAttribute('data-theme',saved);
-  }catch(e){}
-})();
+    // ── 테마 ──
+    function toggleTheme() {
+      var html = document.documentElement;
+      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      try { localStorage.setItem('sh-theme', next); } catch (e) { }
+    }
+    (function () {
+      try {
+        var saved = localStorage.getItem('sh-theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) { }
+    })();
 
-// ── 탭 ──
-function switchTab(t){
-  document.getElementById('tab-terms').className='tab-btn'+(t==='terms'?' on':'');
-  document.getElementById('tab-rules').className='tab-btn'+(t==='rules'?' on':'');
-  document.getElementById('panel-terms').className='tab-panel'+(t==='terms'?' on':'');
-  document.getElementById('panel-rules').className='tab-panel'+(t==='rules'?' on':'');
-}
+    // ── 탭 ──
+    function switchTab(t) {
+      document.getElementById('tab-terms').className = 'tab-btn' + (t === 'terms' ? ' on' : '');
+      document.getElementById('tab-rules').className = 'tab-btn' + (t === 'rules' ? ' on' : '');
+      document.getElementById('panel-terms').className = 'tab-panel' + (t === 'terms' ? ' on' : '');
+      document.getElementById('panel-rules').className = 'tab-panel' + (t === 'rules' ? ' on' : '');
+    }
 
-// ── 아코디언 ──
-function toggleSec(id){document.getElementById(id).classList.toggle('open');}
+    // ── 아코디언 ──
+    function toggleSec(id) { document.getElementById(id).classList.toggle('open'); }
 
-// ── 체크박스 ──
-var state={terms:false,rules:false,all:false,priv:false};
-function setRow(id,on){var el=document.getElementById(id);if(on)el.classList.add('on');else el.classList.remove('on');}
-function toggleChk(rowId,key){
-  state[key]=!state[key];setRow(rowId,state[key]);
-  if(state.terms&&state.rules){state.all=true;setRow('chk-all',true);}
-  else{state.all=false;setRow('chk-all',false);}
-  refreshNext();
-}
-function toggleAll(){
-  var v=!(state.terms&&state.rules);
-  state.terms=v;state.rules=v;state.all=v;
-  setRow('chk-terms',v);setRow('chk-rules',v);setRow('chk-all',v);
-  refreshNext();
-}
-function refreshNext(){document.getElementById('nextBtn').disabled=!(state.terms&&state.rules);}
-function togglePriv(){
-  state.priv=!state.priv;
-  var row=document.getElementById('priv-row');
-  if(state.priv)row.classList.add('on');else row.classList.remove('on');
-}
+    // ── 체크박스 ──
+    var state = { terms: false, rules: false, all: false, priv: false };
+    function setRow(id, on) { var el = document.getElementById(id); if (on) el.classList.add('on'); else el.classList.remove('on'); }
+    function toggleChk(rowId, key) {
+      state[key] = !state[key]; setRow(rowId, state[key]);
+      if (state.terms && state.rules) { state.all = true; setRow('chk-all', true); }
+      else { state.all = false; setRow('chk-all', false); }
+      refreshNext();
+    }
+    function toggleAll() {
+      var v = !(state.terms && state.rules);
+      state.terms = v; state.rules = v; state.all = v;
+      setRow('chk-terms', v); setRow('chk-rules', v); setRow('chk-all', v);
+      refreshNext();
+    }
+    function refreshNext() { document.getElementById('nextBtn').disabled = !(state.terms && state.rules); }
+    function togglePriv() {
+      state.priv = !state.priv;
+      var row = document.getElementById('priv-row');
+      if (state.priv) row.classList.add('on'); else row.classList.remove('on');
+    }
 
-// ── 페이지 이동 ──
-function goP2(){
-  document.getElementById('p1').style.display='none';
-  document.getElementById('p2').style.display='block';
-  document.getElementById('si1').classList.remove('active');document.getElementById('si1').classList.add('done');
-  document.getElementById('si2').classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-function goP1(){
-  document.getElementById('p2').style.display='none';
-  document.getElementById('p1').style.display='block';
-  document.getElementById('si2').classList.remove('active');
-  document.getElementById('si1').classList.remove('done');document.getElementById('si1').classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
+    // ── 페이지 이동 ──
+    function goP2() {
+      document.getElementById('p1').style.display = 'none';
+      document.getElementById('p2').style.display = 'block';
+      document.getElementById('si1').classList.remove('active'); document.getElementById('si1').classList.add('done');
+      document.getElementById('si2').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function goP1() {
+      document.getElementById('p2').style.display = 'none';
+      document.getElementById('p1').style.display = 'block';
+      document.getElementById('si2').classList.remove('active');
+      document.getElementById('si1').classList.remove('done'); document.getElementById('si1').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-// ── 유효성 ──
-function g(id){return document.getElementById(id).value.trim()||'-';}
-function validate(){
-  var ok=true;
-  [['fg-product','i-product'],['fg-price','i-price'],['fg-name','i-name'],['fg-phone','i-phone'],['fg-account','i-account']].forEach(function(p){
-    var val=document.getElementById(p[1]).value.trim();
-    var fg=document.getElementById(p[0]);
-    if(!val){fg.classList.add('err');ok=false;}else fg.classList.remove('err');
-  });
-  if(!state.priv){document.getElementById('priv-row').style.borderColor='var(--red)';ok=false;}
-  else{document.getElementById('priv-row').style.borderColor='';}
-  return ok;
-}
+    // ── 유효성 ──
+    function g(id) { return document.getElementById(id).value.trim() || '-'; }
+    function validate() {
+      var ok = true;
+      [['fg-product', 'i-product'], ['fg-price', 'i-price'], ['fg-name', 'i-name'], ['fg-phone', 'i-phone'], ['fg-account', 'i-account']].forEach(function (p) {
+        var val = document.getElementById(p[1]).value.trim();
+        var fg = document.getElementById(p[0]);
+        if (!val) { fg.classList.add('err'); ok = false; } else fg.classList.remove('err');
+      });
+      if (!state.priv) { document.getElementById('priv-row').style.borderColor = 'var(--red)'; ok = false; }
+      else { document.getElementById('priv-row').style.borderColor = ''; }
+      return ok;
+    }
 
-// ── 제출 ──
-async function doSubmit(){
-  if(!validate())return;
-  var btn=document.getElementById('submitBtn'),txt=document.getElementById('submit-txt'),spin=document.getElementById('spin');
-  btn.disabled=true;txt.style.display='none';spin.style.display='block';
-  var embed={embeds:[{
-    title:'< 영수증 >',color:0xC9A84C,
-    fields:[
-      {name:'[ 판매상품 ]',value:g('i-product'),inline:false},
-      {name:'[ 구매타입 ]',value:document.getElementById('i-buytype').value||'-',inline:true},
-      {name:'[ 판매가격 ]',value:g('i-price'),inline:true},
-      {name:'\u200b',value:'\u200b',inline:false},
-      {name:'[ 사용되는 서버 ]',value:g('i-server'),inline:false},
-      {name:'[ 소속서버 직급 ]',value:g('i-rank'),inline:true},
-      {name:'[ 디스코드 링크 ]',value:g('i-discord'),inline:true},
-      {name:'\u200b',value:'\u200b',inline:false},
-      {name:'[ 구매자 성함 ]',value:g('i-name'),inline:false},
-      {name:'[ 구매자 전화번호 ]',value:g('i-phone'),inline:true},
-      {name:'[ 구매자 계좌번호 ]',value:g('i-account'),inline:false},
-      {name:'[ 개인정보 수집 동의 ]',value:state.priv?'✅ 동의':'❌ 미동의',inline:true},
-    ],
-    footer:{text:'Story HUB · 구매 영수증'},timestamp:new Date().toISOString()
-  }]};
-  try{
-    var res=await fetch(WH,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(embed)});
-    var data=await res.json();
-    if(res.ok&&data.ok){
-      document.getElementById("si2").classList.remove("active");document.getElementById("si2").classList.add("done");
-      document.getElementById("si3").classList.add("active");
-      document.getElementById("modal").classList.add("show");
-    }else{alert("전송 중 오류가 발생했습니다. 다시 시도해 주세요.");}
-  }catch(e){alert("네트워크 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.");}
-  btn.disabled=false;txt.style.display="";spin.style.display="none";
-}
+    // ── 제출 ──
+    async function doSubmit() {
+      if (!validate()) return;
+      var btn = document.getElementById('submitBtn'),
+        txt = document.getElementById('submit-txt'),
+        spin = document.getElementById('spin');
+      btn.disabled = true; txt.style.display = 'none'; spin.style.display = 'block';
 
-// ── 모달 닫기 ──
-function closeModal(){
-  document.getElementById('modal').classList.remove('show');
-  ['i-product','i-price','i-server','i-rank','i-discord','i-name','i-phone','i-account'].forEach(function(id){document.getElementById(id).value='';});
-  document.getElementById('i-buytype').value='';
-  state={terms:false,rules:false,all:false,priv:false};
-  setRow('chk-terms',false);setRow('chk-rules',false);setRow('chk-all',false);
-  document.getElementById('priv-row').classList.remove('on');
-  document.getElementById('si2').classList.remove('done');
-  document.getElementById('si3').classList.remove('active');
-  goP1();refreshNext();
-}
-</script>
+      var rawDiscord = (document.getElementById('i-discord-id') ? document.getElementById('i-discord-id').value.trim() : '') || g('i-discord');
+      var cleanId = rawDiscord.replace(/[<@!>]/g, '').trim();
+
+      var customerTag = '-';
+      var pingContent = null;
+
+      if (/^\d{17,20}$/.test(cleanId)) {
+        customerTag = '<@' + cleanId + '>';
+        pingContent = '<@' + cleanId + '>';
+      } else if (rawDiscord && rawDiscord !== '-') {
+        customerTag = rawDiscord.startsWith('@') ? rawDiscord : '@' + rawDiscord;
+      }
+      var payload = {
+        content: pingContent,
+        embeds: [{
+          title: '< 영수증 >',
+          color: 0xC9A84C,
+          fields: [
+            { name: '[ 고객님 ]', value: customerTag, inline: false },
+            { name: '[ 판매상품 ]', value: g('i-product'), inline: false },
+            { name: '[ 구매타입 ]', value: document.getElementById('i-buytype').value || '-', inline: true },
+            { name: '[ 판매가격 ]', value: g('i-price'), inline: true },
+            { name: '\u200b', value: '\u200b', inline: false },
+            { name: '[ 사용되는 서버 ]', value: g('i-server'), inline: false },
+            { name: '[ 소속서버 직급 ]', value: g('i-rank'), inline: true },
+            { name: '[ 디스코드 링크 ]', value: g('i-discord'), inline: true },
+            { name: '\u200b', value: '\u200b', inline: false },
+            { name: '[ 구매자 성함 ]', value: g('i-name'), inline: false },
+            { name: '[ 구매자 전화번호 ]', value: g('i-phone'), inline: true },
+            { name: '[ 구매자 계좌번호 ]', value: g('i-account'), inline: false },
+            { name: '[ 개인정보 수집 동의 ]', value: state.priv ? '✅ 동의' : '❌ 미동의', inline: true },
+          ],
+          footer: { text: 'Story HUB · 구매 영수증' },
+          timestamp: new Date().toISOString()
+        }]
+      };
+
+      try {
+        var res = await fetch(WH, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        var data = await res.json();
+        if (res.ok && data.ok) {
+          document.getElementById("si2").classList.remove("active");
+          document.getElementById("si2").classList.add("done");
+          document.getElementById("si3").classList.add("active");
+          document.getElementById("modal").classList.add("show");
+        } else {
+          alert("전송 중 오류가 발생했습니다. 다시 시도해 주세요.");
+        }
+      } catch (e) {
+        alert("네트워크 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.");
+      }
+
+      btn.disabled = false; txt.style.display = ""; spin.style.display = "none";
+    }
+
+
+    // ── 모달 닫기 ──
+    function closeModal() {
+      document.getElementById('modal').classList.remove('show');
+      ['i-product', 'i-price', 'i-server', 'i-rank', 'i-discord', 'i-name', 'i-phone', 'i-account'].forEach(function (id) { document.getElementById(id).value = ''; });
+      document.getElementById('i-buytype').value = '';
+      state = { terms: false, rules: false, all: false, priv: false };
+      setRow('chk-terms', false); setRow('chk-rules', false); setRow('chk-all', false);
+      document.getElementById('priv-row').classList.remove('on');
+      document.getElementById('si2').classList.remove('done');
+      document.getElementById('si3').classList.remove('active');
+      goP1(); refreshNext();
+    }
+  </script>
 </body>
+
 </html>
